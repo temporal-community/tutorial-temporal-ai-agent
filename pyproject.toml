@@ -12,6 +12,7 @@ dependencies = [
     "stripe>=12.2.0",
     "temporalio>=1.12.0",
     "uvicorn>=0.34.3",
+    "requests>=2.32.4",
 ]
 
 [build-system]

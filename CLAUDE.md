@@ -4,20 +4,20 @@ This file provides guidance to Claude Code (claude.ai/code) when working with co
 
 ## Project Overview
 
-This is a Temporal AI Agent tutorial that demonstrates multi-turn conversations with an AI agent running inside a Temporal workflow. The agent collects information towards a goal, executes tools, and manages interactive conversations with users. The system is designed to be durable, reliable, and observable using Temporal's orchestration capabilities.
+This is a Temporal AI Agent tutorial that demonstrates multi-turn conversations with an AI agent running inside a Temporal Workflow. The agent collects information towards a goal, executes tools, and manages interactive conversations with users. The system is designed to be durable, reliable, and observable using Temporal's orchestration capabilities.
 
 ## Core Architecture
 
 The system follows an agentic AI pattern with these key components:
 
 - **Temporal Workflow** (`workflows/agent_goal_workflow.py`): Orchestrates the main agent loop, manages conversation state, handles tool execution, and provides durability
-- **Activities** (`activities/tool_activities.py`): Temporal activities that execute tools and LLM calls with automatic retry logic
+- **Activities** (`activities/tool_activities.py`): Temporal Activities that execute tools and LLM calls with automatic retry logic
+- **Worker** (`worker/worker.py`): Temporal Worker that executes Workflows and Activities.
 - **Tools** (`tools/`): Python functions that define agent capabilities (find events, search flights, create invoices)
-- **Goal Registry** (`tools/goal_registry.py`): Defines agent goals and their associated tools and prompts
 - **Prompts** (`prompts/`): System prompts and conversation management for LLM interactions
 - **Models** (`models/`): Pydantic models for data structures and API requests
 - **Frontend** (`frontend/`): React/Vite UI for chat interface
-- **API** (`api/main.py`): FastAPI backend that bridges the web UI with Temporal workflows
+- **API** (`api/main.py`): FastAPI backend that bridges the web UI with Temporal Workflows
 
 ## Development Commands
 
@@ -29,7 +29,7 @@ source .venv/bin/activate  # On Windows: .venv\Scripts\activate
 uv pip install -e .
 
 # Run Temporal worker
-uv run python scripts/run_worker.py
+uv run python worker/worker.py
 
 # Run API server
 uv run uvicorn api.main:app --reload
@@ -76,10 +76,10 @@ Optional Temporal configuration:
 4. Update prompts to include tool instructions
 
 ### Workflow State Management
-- Conversation history is stored in workflow state
+- Conversation history is stored in Workflow state
 - Tool execution results are tracked durably
 - User confirmations are handled via Temporal signals
-- Chat termination is managed through workflow signals
+- Chat termination is managed through Workflow signals
 
 ### LLM Integration
 - Uses LiteLLM for multi-provider support
@@ -91,6 +91,6 @@ Optional Temporal configuration:
 
 - `scripts/`: Contains utility scripts for testing and running components
 - `shared/config.py`: Central configuration management
-- `workflows/workflow_helpers.py`: Common utilities for workflow operations
+- `workflows/workflow_helpers.py`: Common utilities for Workflow operations
 - Frontend components follow React functional component patterns with hooks
 - API endpoints are defined in `api/main.py` with FastAPI patterns

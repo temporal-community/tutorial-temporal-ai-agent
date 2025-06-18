@@ -119,7 +119,7 @@ Run the following commands in separate terminal windows:
 
 1. Start the Temporal worker:
 ```bash
-uv run python scripts/run_worker.py
+uv run python worker/worker.py
 ```
 
 2. Start the API server:

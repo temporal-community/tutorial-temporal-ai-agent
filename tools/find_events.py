@@ -1,5 +1,5 @@
 import json
-from datetime import datetime
+from datetime import date, datetime
 from pathlib import Path
 
 
@@ -23,6 +23,7 @@ def find_events(args: dict) -> dict:
         return [prev_m, m, next_m]
 
     valid_months = get_adjacent_months(month_number)
+    current_date = date.today()
 
     matching_events = []
     for city_name, events in json.load(open(file_path)).items():
@@ -30,8 +31,14 @@ def find_events(args: dict) -> dict:
             continue
 
         for event in events:
-            date_from = datetime.strptime(event["dateFrom"], "%Y-%m-%d")
-            date_to = datetime.strptime(event["dateTo"], "%Y-%m-%d")
+            date_from = datetime.strptime(event["dateFrom"], "%Y-%m-%d").date()
+            date_to = datetime.strptime(event["dateTo"], "%Y-%m-%d").date()
+
+            # Check if event has already passed and adjust year if needed
+            if date_from < current_date:
+                # Increment year by 1 for both dates
+                date_from = date_from.replace(year=current_date.year + 1)
+                date_to = date_to.replace(year=current_date.year + 1)
 
             # If the event's start or end month is in our valid months
             if date_from.month in valid_months or date_to.month in valid_months:
@@ -50,8 +57,8 @@ def find_events(args: dict) -> dict:
                     {
                         "city": city_name,
                         "eventName": event["eventName"],
-                        "dateFrom": event["dateFrom"],
-                        "dateTo": event["dateTo"],
+                        "dateFrom": date_from.strftime("%Y-%m-%d"),
+                        "dateTo": date_to.strftime("%Y-%m-%d"),
                         "description": event["description"],
                         "month": month_context,
                     }

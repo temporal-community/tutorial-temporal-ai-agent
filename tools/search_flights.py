@@ -22,10 +22,7 @@ def search_airport(query: str) -> list:
     # Sanitize the query to ensure it is URL-safe
     print(f"Searching for: {query}")
     url = f"https://{api_host}/api/v1/flights/searchAirport"
-    params = {
-        "query": query,
-        "locale": "en-US"
-    }
+    params = {"query": query, "locale": "en-US"}
 
     try:
         response = requests.get(url, headers=headers, params=params)
@@ -33,7 +30,7 @@ def search_airport(query: str) -> list:
             print(f"Error: API responded with status code {response.status_code}")
             print(f"Response: {response.text}")
             return []
-        
+
         return response.json().get("data", [])
     except requests.RequestException as e:
         print(f"Request error: {e}")
@@ -95,7 +92,7 @@ def search_flights_real_api(
         "sortBy": "best",
         "currency": "USD",
         "market": "en-US",
-        "countryCode": "US"
+        "countryCode": "US",
     }
 
     try:
