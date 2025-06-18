@@ -23,7 +23,6 @@ LLM_ACTIVITY_SCHEDULE_TO_CLOSE_TIMEOUT = timedelta(minutes=30)
 async def handle_tool_execution(
     current_tool: str,
     tool_data: ToolData,
-    tool_results: list,
     add_message_callback: Callable[..., Any],
     prompt_queue: Deque[str],
 ) -> None:
@@ -41,7 +40,6 @@ async def handle_tool_execution(
             ),
         )
         dynamic_result["tool"] = current_tool
-        tool_results.append(dynamic_result)
     except ActivityError as e:
         workflow.logger.error(f"Tool execution failed: {str(e)}")
         dynamic_result = {"error": str(e), "tool": current_tool}

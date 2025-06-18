@@ -1,9 +1,9 @@
 import json
 
-from tools.search_flights import search_flights
+from tools.find_events import find_events
 
 # Example usage
 if __name__ == "__main__":
     search_args = {"city": "Sydney", "month": "July"}
-    results = search_flights(search_args)
+    results = find_events(search_args)
     print(json.dumps(results, indent=2))

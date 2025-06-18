@@ -1,5 +1,3 @@
-from typing import List
-
 import tools.tool_registry as tool_registry
 from models.core import AgentGoal
 
@@ -40,6 +38,3 @@ goal_event_flight_invoice = AgentGoal(
         ]
     ),
 )
-# Add the goals to a list for more generic processing, like listing available agents
-goal_list: List[AgentGoal] = []
-goal_list.append(goal_event_flight_invoice)

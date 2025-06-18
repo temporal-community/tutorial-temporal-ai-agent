@@ -1,7 +1,6 @@
 from collections import deque
-from dataclasses import replace
 from datetime import timedelta
-from typing import Any, Deque, Dict, List, Optional, Union
+from typing import Any, Deque, Dict, Optional, Union
 
 from temporalio import workflow
 from temporalio.common import RetryPolicy
@@ -36,7 +35,6 @@ class AgentGoalWorkflow:
         self.confirmed: bool = (
             False  # indicates that we have confirmation to proceed to run tool
         )
-        self.tool_results: List[Dict[str, Any]] = []
         self.goal: Optional[AgentGoal] = None
         self.show_tool_args_confirmation: bool = (
             True  # set from env file in activity lookup_wf_env_settings
@@ -305,7 +303,6 @@ class AgentGoalWorkflow:
         await helpers.handle_tool_execution(
             current_tool,
             self.tool_data,
-            self.tool_results,
             self.add_message,
             self.prompt_queue,
         )

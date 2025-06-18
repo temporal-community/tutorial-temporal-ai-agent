@@ -1,6 +1,5 @@
+from dataclasses import dataclass
 from typing import Any, Dict, List, Literal, Union
-
-from pydantic.dataclasses import dataclass
 
 # Common type aliases
 

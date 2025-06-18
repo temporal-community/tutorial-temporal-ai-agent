@@ -159,7 +159,7 @@ class ToolActivities:
         handles default/None
         """
         output: EnvLookupOutput = EnvLookupOutput(
-            show_confirm=input.show_confirm_default, multi_goal_mode=True
+            show_confirm=input.show_confirm_default
         )
         show_confirm_value = os.getenv(input.show_confirm_env_var_name)
         if show_confirm_value is None:
@@ -168,17 +168,6 @@ class ToolActivities:
             output.show_confirm = False
         else:
             output.show_confirm = True
-
-        first_goal_value = os.getenv("AGENT_GOAL")
-        if first_goal_value is None:
-            output.multi_goal_mode = True  # default if unset
-        elif (
-            first_goal_value is not None
-            and first_goal_value.lower() != "goal_choose_agent_type"
-        ):
-            output.multi_goal_mode = False
-        else:
-            output.multi_goal_mode = True
 
         return output
 

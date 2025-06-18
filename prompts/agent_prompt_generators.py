@@ -5,8 +5,6 @@ from models.core import AgentGoal
 from models.requests import ConversationHistory, ToolData
 from prompts.prompts import GENAI_PROMPT, MISSING_ARGS_PROMPT, TOOL_COMPLETION_PROMPT
 
-MULTI_GOAL_MODE: bool | None = None
-
 
 def generate_genai_prompt(
     agent_goal: AgentGoal,

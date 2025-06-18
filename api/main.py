@@ -1,7 +1,7 @@
 import asyncio
 import os
 from contextlib import asynccontextmanager
-from typing import Any, Dict, Optional
+from typing import Dict, Optional
 
 from dotenv import load_dotenv
 from fastapi import FastAPI, HTTPException
@@ -10,14 +10,9 @@ from temporalio.api.enums.v1 import WorkflowExecutionStatus
 from temporalio.client import Client
 from temporalio.exceptions import TemporalError
 
-from models.requests import (
-    AgentGoal,
-    AgentGoalWorkflowParams,
-    CombinedInput,
-    ConversationHistory,
-)
+from models.requests import AgentGoalWorkflowParams, CombinedInput, ConversationHistory
 from shared.config import TEMPORAL_TASK_QUEUE, get_temporal_client
-from tools.goal_registry import goal_event_flight_invoice, goal_list
+from tools.goal_registry import goal_event_flight_invoice
 from workflows.agent_goal_workflow import AgentGoalWorkflow
 
 temporal_client: Optional[Client] = None
@@ -36,17 +31,7 @@ app = FastAPI(lifespan=lifespan)
 # Load environment variables
 load_dotenv()
 
-
-def get_initial_agent_goal() -> AgentGoal:
-    """Get the agent goal from environment variables."""
-
-    env_goal = os.getenv(
-        "AGENT_GOAL", "goal_event_flight_invoice"
-    )  # if no goal is set in the env file, default to choosing an agent
-    for listed_goal in goal_list:
-        if listed_goal.id == env_goal:
-            return listed_goal
-    return goal_event_flight_invoice
+AGENT_GOAL = goal_event_flight_invoice
 
 
 app.add_middleware(
@@ -61,35 +46,6 @@ app.add_middleware(
 @app.get("/")
 def root() -> Dict[str, str]:
     return {"message": "Temporal AI Agent!"}
-
-
-@app.get("/tool-data")
-async def get_tool_data():
-    """Calls the workflow's 'get_tool_data' query.
-
-    Returns:
-        Tool data from the workflow or empty dict if workflow not found/completed.
-    """
-
-    temporal_client = _ensure_temporal_client()
-
-    try:
-        # Get workflow handle
-        handle = temporal_client.get_workflow_handle("agent-workflow")
-
-        # Check if the workflow is completed
-        workflow_status = await handle.describe()
-        if workflow_status.status == 2:
-            # Workflow is completed; return an empty response
-            return {}
-
-        # Query the workflow
-        tool_data = await handle.query("get_latest_tool_data")
-        return tool_data
-    except TemporalError as e:
-        # Workflow not found; return an empty response
-        print(e)
-        return {}
 
 
 @app.get("/get-conversation-history")
@@ -145,31 +101,6 @@ async def get_conversation_history() -> ConversationHistory:
             )
 
 
-@app.get("/agent-goal")
-async def get_agent_goal() -> Dict[str, Any]:
-    """Calls the workflow's 'get_agent_goal' query."""
-
-    temporal_client = _ensure_temporal_client()
-
-    try:
-        # Get workflow handle
-        handle = temporal_client.get_workflow_handle("agent-workflow")
-
-        # Check if the workflow is completed
-        workflow_status = await handle.describe()
-        if workflow_status.status == 2:
-            # Workflow is completed; return an empty response
-            return {}
-
-        # Query the workflow
-        agent_goal = await handle.query("get_agent_goal")
-        return agent_goal
-    except TemporalError as e:
-        # Workflow not found; return an empty response
-        print(e)
-        return {}
-
-
 @app.post("/send-prompt")
 async def send_prompt(prompt: str) -> Dict[str, str]:
 
@@ -178,7 +109,7 @@ async def send_prompt(prompt: str) -> Dict[str, str]:
     # Create combined input with goal from environment
     combined_input = CombinedInput(
         tool_params=AgentGoalWorkflowParams(None, None),
-        agent_goal=get_initial_agent_goal(),
+        agent_goal=AGENT_GOAL,
         # change to get from workflow query
     )
 
@@ -227,14 +158,13 @@ async def end_chat() -> Dict[str, str]:
 
 @app.post("/start-workflow")
 async def start_workflow() -> Dict[str, str]:
-    initial_agent_goal = get_initial_agent_goal()
 
     temporal_client = _ensure_temporal_client()
 
     # Create combined input
     combined_input = CombinedInput(
         tool_params=AgentGoalWorkflowParams(None, None),
-        agent_goal=initial_agent_goal,
+        agent_goal=AGENT_GOAL,
     )
 
     workflow_id = "agent-workflow"
@@ -246,11 +176,11 @@ async def start_workflow() -> Dict[str, str]:
         id=workflow_id,
         task_queue=TEMPORAL_TASK_QUEUE,
         start_signal="user_prompt",
-        start_signal_args=["### " + initial_agent_goal.starter_prompt],
+        start_signal_args=["### " + AGENT_GOAL.starter_prompt],
     )
 
     return {
-        "message": f"Workflow started with goal's starter prompt: {initial_agent_goal.starter_prompt}."
+        "message": f"Workflow started with goal's starter prompt: {AGENT_GOAL.starter_prompt}."
     }
 
 

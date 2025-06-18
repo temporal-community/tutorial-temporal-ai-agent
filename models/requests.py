@@ -1,7 +1,5 @@
+from dataclasses import dataclass, field
 from typing import Any, Deque, Dict, Optional, TypedDict
-
-from pydantic import Field
-from pydantic.dataclasses import dataclass
 
 from models.core import AgentGoal, ConversationHistory, NextStep
 
@@ -42,7 +40,7 @@ class ValidationInput:
 @dataclass
 class ValidationResult:
     validationResult: bool
-    validationFailedReason: Dict[str, Any] = Field(default_factory=dict)
+    validationFailedReason: Dict[str, Any] = field(default_factory=dict)
 
 
 @dataclass
@@ -54,5 +52,3 @@ class EnvLookupInput:
 @dataclass
 class EnvLookupOutput:
     show_confirm: bool
-    multi_goal_mode: bool
-    multi_goal_mode: bool
