@@ -1,9 +1,8 @@
-import http.client
 import json
 import os
 import random
-import urllib.parse
 
+import requests
 from dotenv import load_dotenv
 
 
@@ -15,7 +14,6 @@ def search_airport(query: str) -> list:
     api_key = os.getenv("RAPIDAPI_KEY", "YOUR_DEFAULT_KEY")
     api_host = os.getenv("RAPIDAPI_HOST_FLIGHTS", "sky-scrapper.p.rapidapi.com")
 
-    conn = http.client.HTTPSConnection(api_host)
     headers = {
         "x-rapidapi-key": api_key,
         "x-rapidapi-host": api_host,
@@ -23,24 +21,26 @@ def search_airport(query: str) -> list:
 
     # Sanitize the query to ensure it is URL-safe
     print(f"Searching for: {query}")
-    encoded_query = urllib.parse.quote(query)
-    path = f"/api/v1/flights/searchAirport?query={encoded_query}&locale=en-US"
-
-    conn.request("GET", path, headers=headers)
-    res = conn.getresponse()
-    if res.status != 200:
-        print(f"Error: API responded with status code {res.status}")
-        print(f"Response: {res.read().decode('utf-8')}")
-        return []
-
-    data = res.read()
-    conn.close()
+    url = f"https://{api_host}/api/v1/flights/searchAirport"
+    params = {
+        "query": query,
+        "locale": "en-US"
+    }
 
     try:
-        return json.loads(data).get("data", [])
+        response = requests.get(url, headers=headers, params=params)
+        if response.status_code != 200:
+            print(f"Error: API responded with status code {response.status_code}")
+            print(f"Response: {response.text}")
+            return []
+        
+        return response.json().get("data", [])
+    except requests.RequestException as e:
+        print(f"Request error: {e}")
+        return []
     except json.JSONDecodeError:
         print("Error: Failed to decode JSON response")
-        print(f"Response: {data.decode('utf-8')}")
+        print(f"Response: {response.text}")
         return []
 
 
@@ -77,31 +77,32 @@ def search_flights_real_api(
     api_key = os.getenv("RAPIDAPI_KEY", "YOUR_DEFAULT_KEY")
     api_host = os.getenv("RAPIDAPI_HOST_FLIGHTS", "sky-scrapper.p.rapidapi.com")
 
-    conn = http.client.HTTPSConnection(api_host)
     headers = {
         "x-rapidapi-key": api_key,
         "x-rapidapi-host": api_host,
     }
 
-    path = (
-        "/api/v2/flights/searchFlights?"
-        f"originSkyId={origin_sky_id}"
-        f"&destinationSkyId={dest_sky_id}"
-        f"&originEntityId={origin_entity_id}"
-        f"&destinationEntityId={dest_entity_id}"
-        f"&date={date_depart}"
-        f"&returnDate={date_return}"
-        f"&cabinClass=economy&adults=1&sortBy=best&currency=USD"
-        f"&market=en-US&countryCode=US"
-    )
-
-    conn.request("GET", path, headers=headers)
-    res = conn.getresponse()
-    data = res.read()
-    conn.close()
+    url = f"https://{api_host}/api/v2/flights/searchFlights"
+    params = {
+        "originSkyId": origin_sky_id,
+        "destinationSkyId": dest_sky_id,
+        "originEntityId": origin_entity_id,
+        "destinationEntityId": dest_entity_id,
+        "date": date_depart,
+        "returnDate": date_return,
+        "cabinClass": "economy",
+        "adults": "1",
+        "sortBy": "best",
+        "currency": "USD",
+        "market": "en-US",
+        "countryCode": "US"
+    }
 
     try:
-        json_data = json.loads(data)
+        response = requests.get(url, headers=headers, params=params)
+        json_data = response.json()
+    except requests.RequestException as e:
+        return {"error": f"Request error: {e}"}
     except json.JSONDecodeError:
         return {"error": "Invalid JSON response"}
 
