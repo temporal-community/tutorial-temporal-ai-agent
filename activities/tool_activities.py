@@ -26,9 +26,11 @@ class ToolActivities:
         self.llm_model = os.environ.get("LLM_MODEL", "openai/gpt-4")
         self.llm_key = os.environ.get("LLM_KEY")
         self.llm_base_url = os.environ.get("LLM_BASE_URL")
-        print(f"Initializing ToolActivities with LLM model: {self.llm_model}")
+        activity.logger.info(
+            f"Initializing ToolActivities with LLM model: {self.llm_model}"
+        )
         if self.llm_base_url:
-            print(f"Using custom base URL: {self.llm_base_url}")
+            activity.logger.info(f"Using custom base URL: {self.llm_base_url}")
 
     @activity.defn
     async def agent_validatePrompt(
@@ -127,7 +129,7 @@ class ToolActivities:
 
             return self.parse_json_response(response_content)
         except Exception as e:
-            print(f"Error in LLM completion: {str(e)}")
+            activity.logger.error(f"Error in LLM completion: {str(e)}")
             raise
 
     def parse_json_response(self, response_content: str) -> dict:
@@ -138,7 +140,7 @@ class ToolActivities:
             data = json.loads(response_content)
             return data
         except json.JSONDecodeError as e:
-            print(f"Invalid JSON: {e}")
+            activity.logger.error(f"Invalid JSON: {e}")
             raise
 
     def sanitize_json_response(self, response_content: str) -> str:
