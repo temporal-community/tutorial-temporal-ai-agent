@@ -26,7 +26,9 @@ def find_events(args: dict) -> dict:
     current_date = date.today()
 
     matching_events = []
-    for city_name, events in json.load(open(file_path)).items():
+    with open(file_path) as f:
+        data = json.load(f)
+    for city_name, events in data.items():
         if search_city and search_city not in city_name.lower():
             continue
 
