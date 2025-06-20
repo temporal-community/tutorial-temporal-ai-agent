@@ -15,34 +15,8 @@ SHOW_CONFIRM=True
 ```
 We recommend setting this to `False` in most cases, as it can clutter the conversation with confirmation messages.
 
-### Quick Start with Makefile
 
-We've provided a Makefile to simplify the setup and running of the application. Here are the main commands:
-
-```bash
-# Initial setup
-make setup              # Creates virtual environment and installs dependencies
-make setup-venv         # Creates virtual environment only
-make install            # Installs all dependencies
-
-# Running the application
-make run-worker         # Starts the Temporal worker
-make run-api            # Starts the API server
-make run-frontend       # Starts the frontend development server
-
-# Additional services
-make run-train-api      # Starts the train API server
-make run-legacy-worker  # Starts the legacy worker
-make run-enterprise     # Builds and runs the enterprise .NET worker
-
-# Development environment setup
-make setup-temporal-mac # Installs and starts Temporal server on Mac
-
-# View all available commands
-make help
-```
-
-### Manual Setup (Alternative to Makefile)
+### Setup
 
 If you prefer to run commands manually, see the sections below for detailed instructions on setting up the backend, frontend, and other components.
 
@@ -86,12 +60,6 @@ For a complete list of supported models and providers, visit the [LiteLLM docume
 
 By default, this application will connect to a local Temporal server (`localhost:7233`) in the default namespace, using the `agent-task-queue` task queue. You can override these settings in your `.env` file.
 
-### Use Temporal Cloud
-
-See [.env.example](.env.example) for details on connecting to Temporal Cloud using mTLS or API key authentication.
-
-[Sign up for Temporal Cloud](https://temporal.io/get-cloud)
-
 ### Use a local Temporal Dev Server
 
 On a Mac
@@ -103,7 +71,7 @@ See the [Temporal documentation](https://learn.temporal.io/getting_started/pytho
 
 You can also run a local Temporal server using Docker Compose. See the `Development with Docker` section below.
 
-### Local Machine (no docker)
+### Local Machine
 
 **Python Backend**
 

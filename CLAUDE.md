@@ -34,10 +34,17 @@ uv run python worker/worker.py
 # Run API server
 uv run uvicorn api.main:app --reload
 
+# Code formatting (run before committing)
+uv run black .
+uv run isort .
+
 # Test individual tools
 uv run python scripts/find_events_test.py
 uv run python scripts/flight_api_test.py
 uv run python scripts/create_invoice_test.py
+
+# Send confirmation signal to workflow (for debugging)
+uv run python scripts/send_confirm.py
 ```
 
 ### Frontend (React)
@@ -66,6 +73,28 @@ Optional Temporal configuration:
 - `TEMPORAL_ADDRESS`: Temporal server address (default: localhost:7233)
 - `TEMPORAL_NAMESPACE`: Temporal namespace (default: default)
 - `TEMPORAL_TASK_QUEUE`: Task queue name (default: agent-task-queue)
+
+## Agentic AI Architecture
+
+This system implements agentic AI patterns with these key elements:
+
+1. **Goals and Tools**: Goals define high-level objectives, composed of specific tools that execute individual steps
+2. **Agent Loops**: Interactive cycles of LLM prompting → tool execution → user input validation → repeat until goals complete
+3. **Tool Confirmation**: Tools can require user approval before execution (controlled by `SHOW_CONFIRM` env var)
+4. **Input Validation**: LLM validates user input before processing with the main LLM
+5. **Conversation Summarization**: LLM compacts conversation history to manage token limits
+6. **Prompt Construction**: Dynamic prompts built from system instructions, conversation history, and tool metadata
+7. **Durability**: Temporal Workflows ensure reliable execution and state management across failures
+
+### Workflow Execution Flow
+
+1. User starts conversation with a goal (e.g., "book flight to event")
+2. Workflow orchestrates conversation loop:
+   - Generate LLM prompt with current state and available tools
+   - Execute LLM to get next action (ask question, call tool, etc.)
+   - If tool call: validate args, get user confirmation, execute via Activity
+   - Store results in conversation history
+   - Continue until goal complete or user terminates
 
 ## Key Patterns
 
