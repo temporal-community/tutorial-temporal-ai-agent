@@ -33,7 +33,6 @@ coverage.xml
 .idea/
 
 .env
-.env*
 
 # Cursor
 .cursor
