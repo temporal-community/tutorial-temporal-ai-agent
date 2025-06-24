@@ -1,25 +1,18 @@
-# Temporal AI Agent
+# Tutorial - Temporal AI Agent
 
-This demo shows a multi-turn conversation with an AI agent running inside a Temporal workflow. The purpose of the agent is to collect information towards a goal, running tools along the way. There's a simple DSL input for collecting information (currently set up to use mock functions to search for public events, search for flights around those events, then create a test Stripe invoice for the trip).
+_This repository is the companion repository for the tutorial [How To Build a Durable Agentic AI with Temporal and Python](#)._
 
-The AI will respond with clarifications and ask for any missing information to that goal. You can configure it to use any LLM supported by [LiteLLM](https://docs.litellm.ai/docs/providers), including:
-- OpenAI models (GPT-4, GPT-3.5)
-- Anthropic Claude models
-- Google Gemini models
-- Deepseek models
-- Ollama models (local)
-- And many more!
+The code in this repository supports learning how to build a durable agentic AI with Temporal.
+It is inspired by Steve Androulakis' [agengit AI implementation](https://github.com/temporal-community/temporal-ai-agent/) using Temporal.
+This tutorial currently is the first step in building out an application similar to Steve's.
 
-It's really helpful to [watch the demo (5 minute YouTube video)](https://www.youtube.com/watch?v=GEXllEH2XiQ) to understand how interaction works.
-
-[![Watch the demo](./assets/agent-youtube-screenshot.jpeg)](https://www.youtube.com/watch?v=GEXllEH2XiQ)
-
-### Multi-Agent Demo Video
-See multi-agent execution in action [here](https://www.youtube.com/watch?v=8Dc_0dC14yY).
+**Want to learn how to build this application from scratch?
+[Check out the tutorial](#)**
 
 ## Why Temporal?
-There are a lot of AI and Agentic AI tools out there, and more on the way. But why Temporal? Temporal gives this system reliablity, state management, a code-first approach that we really like, built-in observability and easy error handling.
-For more, check out [architecture-decisions](./architecture-decisions.md).
+There are a lot of AI and Agentic AI tools out there, and more on the way. 
+But why Temporal? 
+Temporal gives this system reliablity, state management, a code-first approach that we really like, built-in observability and easy error handling.
 
 ## What is "Agentic AI"?
 These are the key elements of an agentic framework:
@@ -31,15 +24,74 @@ These are the key elements of an agentic framework:
 6. Prompt construction made of system prompts, conversation history, and tool metadata - sent to the LLM to create user questions and confirmations
 7. Ideally high durability (done in this system with Temporal Workflow and Activities)
 
-For a deeper dive into this, check out the [architecture guide](./architecture.md).
-
 ## Setup and Configuration
-See [the Setup guide](./SETUP.md) for detailed instructions. The basic configuration requires just two environment variables:
+
+To run the code in this repository, use the [`uv`](https://docs.astral.sh/uv/) package and project manager.
+
+Setup the development environment:
+
+```bash
+uv sync
+```
+
+Make a copy of `.env.example` and configure the environment variables.
+
+```bash
+cp .env.example .env
+```
+
+You can get started by only setting these two variables. 
+If you want to use the [Sky Scrapper API](https://rapidapi.com/apiheya/api/sky-scrapper) or [Stripe APIs](https://stripe.com/lp/start-now), you will need to create accounts and provide the keys.
+(more information in the [tutorial](#))
+
 ```bash
 LLM_MODEL=openai/gpt-4o  # or any other model supported by LiteLLM
 LLM_KEY=your-api-key-here
 ```
 
+## Running the application
 
-## Architecture
-See [the architecture guide](./architecture.md).
+In one terminal, run the Temporal development server.
+Alternatively you can set the configuration options in your `.env` file to connect to Temporal cloud.
+
+```bash
+temporal server start-dev
+```
+
+In another terminal, run the worker
+
+```bash
+uv run worker/worker.py
+```
+
+In another terminal, run the API
+
+```bash
+uv run uvicorn api.main:app --reload
+```
+
+Finally, in another terminal, install and run the frontend
+
+```bash
+npm install
+npx vite
+```
+
+Test the agent in the web browser `localhost:5173`
+
+## Testing individual parts
+
+You can also test each individual tool using the testing scripts found in the `scripts` directory.
+You would call them similarly to how you called the worker code above.
+
+```bash
+uv run scripts/find_events_test.py
+uv run scripts/search_flights_test.py
+uv run scripts/create_invoice_test.py
+```
+
+## Interacting with Claude Code
+
+Want to interact with Claude Code and this repository?
+Great!
+We have included a CLAUDE.md file so you can ask it questions and have Claude make changes for you.
