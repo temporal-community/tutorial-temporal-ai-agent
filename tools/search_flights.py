@@ -185,25 +185,20 @@ def generate_smart_flights(origin: str, destination: str) -> list:
             {"name": "Delta Airlines", "code": "DL"},
             {"name": "Southwest Airlines", "code": "WN"},
         ],
-        "us_international": [
+        "domestic_canada": [
+            {"name": "Air Canada", "code": "AC"},
+            {"name": "WestJet", "code": "WS"},
+        ],
+        "us_canada": [
             {"name": "American Airlines", "code": "AA"},
             {"name": "United Airlines", "code": "UA"},
             {"name": "Delta Airlines", "code": "DL"},
-            {"name": "Virgin Atlantic", "code": "VS"},
-        ],
-        "australia_nz": [
-            {"name": "Qantas", "code": "QF"},
-            {"name": "Jetstar", "code": "JQ"},
-            {"name": "Virgin Australia", "code": "VA"},
-            {"name": "Air New Zealand", "code": "NZ"},
+            {"name": "Air Canada", "code": "AC"},
         ],
         "international": [
             {"name": "American Airlines", "code": "AA"},
             {"name": "United Airlines", "code": "UA"},
             {"name": "Delta Airlines", "code": "DL"},
-            {"name": "Air New Zealand", "code": "NZ"},
-            {"name": "Qantas", "code": "QF"},
-            {"name": "Singapore Airlines", "code": "SQ"},
         ],
     }
 
@@ -211,54 +206,160 @@ def generate_smart_flights(origin: str, destination: str) -> list:
     origin_lower = origin.lower()
     dest_lower = destination.lower()
 
-    # Australia/NZ cities
-    anz_cities = [
-        "sydney",
-        "melbourne",
-        "syd",
-        "mel",
-        "auckland",
-        "akl",
-        "wellington",
-        "wlg",
-        "brisbane",
-        "bne",
-        "perth",
-        "per",
-    ]
-    # US cities
+    # US cities from find_events_data.json
     us_cities = [
-        "los angeles",
-        "lax",
-        "san francisco",
-        "sfo",
+        # Major cities with events
         "new york",
+        "los angeles",
+        "chicago",
+        "houston",
+        "philadelphia",
+        "phoenix",
+        "san antonio",
+        "san diego",
+        "dallas",
+        "san jose",
+        "austin",
+        "jacksonville",
+        "fort worth",
+        "columbus",
+        "charlotte",
+        "san francisco",
+        "indianapolis",
+        "seattle",
+        "denver",
+        "washington",
+        "boston",
+        "el paso",
+        "nashville",
+        "detroit",
+        "oklahoma city",
+        "portland",
+        "las vegas",
+        "louisville",
+        "baltimore",
+        "milwaukee",
+        "albuquerque",
+        "tucson",
+        "fresno",
+        "sacramento",
+        "kansas city",
+        "mesa",
+        "atlanta",
+        "colorado springs",
+        "raleigh",
+        "omaha",
+        "miami",
+        "long beach",
+        "virginia beach",
+        "oakland",
+        "minneapolis",
+        "tulsa",
+        "arlington",
+        "new orleans",
+        "wichita",
+        "cleveland",
+        "tampa",
+        # Common airport codes
+        "lax",
+        "sfo",
         "nyc",
         "jfk",
-        "chicago",
         "ord",
-        "miami",
         "mia",
+        "dfw",
+        "atl",
+        "den",
+        "sea",
+        "bos",
+        "phx",
+        "las",
+        "dtw",
+        "msp",
+        "stl",
+        "tpa",
+        "mco",
+        "iad",
+        "bwi",
+        "pdx",
+        "san",
+        "smf",
+        "sjc",
+        "oak",
+        "rno",
+        "slc",
+        "mke",
+        "msy",
+        "sat",
+        "aus",
+        "iah",
+        "dal",
+        "okc",
+        "tul",
+        "lit",
+        "mem",
+        "bna",
+        "rdu",
+        "clt",
+        "gso",
+        "jax",
+        "fll",
+        "pbi",
+        "rsw",
+        "tus",
+        "abq",
+        "elp",
+        "cos",
+        "dsm",
+        "oma",
+        "ict",
+        "cvg",
+        "cle",
+        "cmh",
+        "ind",
+        "sdf",
     ]
 
-    is_origin_anz = any(city in origin_lower for city in anz_cities)
-    is_dest_anz = any(city in dest_lower for city in anz_cities)
+    # Canadian cities
+    canadian_cities = [
+        "toronto",
+        "yyz",
+        "montreal",
+        "yul",
+        "vancouver",
+        "yvr",
+        "calgary",
+        "yyc",
+        "ottawa",
+        "yow",
+        "edmonton",
+        "yeg",
+        "winnipeg",
+        "ywg",
+        "quebec",
+        "yqb",
+        "hamilton",
+        "yhm",
+    ]
+
     is_origin_us = any(city in origin_lower for city in us_cities)
     is_dest_us = any(city in dest_lower for city in us_cities)
+    is_origin_canada = any(city in origin_lower for city in canadian_cities)
+    is_dest_canada = any(city in dest_lower for city in canadian_cities)
 
     # Determine airline pool and base price
-    if (is_origin_us and is_dest_anz) or (is_origin_anz and is_dest_us):
-        # Trans-Pacific routes
-        airline_pool = airlines_by_region["international"]
-        base_price = random.randint(1200, 1800)
-    elif is_origin_anz and is_dest_anz:
-        # Australia/NZ domestic
-        airline_pool = airlines_by_region["australia_nz"]
-        base_price = random.randint(300, 600)
-    elif is_origin_us and is_dest_us:
+    if is_origin_us and is_dest_us:
         # US domestic
         airline_pool = airlines_by_region["domestic_us"]
         base_price = random.randint(200, 800)
+    elif is_origin_canada and is_dest_canada:
+        # Canada domestic
+        airline_pool = airlines_by_region["domestic_canada"]
+        base_price = random.randint(150, 600)
+    elif (is_origin_us and is_dest_canada) or (is_origin_canada and is_dest_us):
+        # US-Canada routes
+        airline_pool = airlines_by_region["us_canada"]
+        base_price = random.randint(250, 700)
     else:
         # General international
         airline_pool = airlines_by_region["international"]
@@ -284,12 +385,8 @@ def generate_smart_flights(origin: str, destination: str) -> list:
 
         # Price variation (cheaper airlines get lower prices)
         price_multiplier = 1.0
-        if "Southwest" in airline["name"] or "Jetstar" in airline["name"]:
+        if "Southwest" in airline["name"] or "WestJet" in airline["name"]:
             price_multiplier = 0.7
-        elif "Virgin" in airline["name"]:
-            price_multiplier = 0.85
-        elif "Singapore" in airline["name"]:
-            price_multiplier = 1.2
 
         # Add some random variation
         price_variation = random.uniform(0.9, 1.1)

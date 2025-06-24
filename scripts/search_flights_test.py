@@ -6,8 +6,8 @@ if __name__ == "__main__":
     # Suppose user typed "new" for New York, "lon" for London
     flights = search_flights(
         {
-            "origin": "ORD",
-            "destination": "DFW",
+            "origin": "HOU",
+            "destination": "AUS",
             "dateDepart": "2025-09-20",
             "dateReturn": "2025-09-22",
         }
