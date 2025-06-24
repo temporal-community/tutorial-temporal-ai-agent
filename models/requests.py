@@ -1,7 +1,14 @@
 from dataclasses import dataclass, field
-from typing import Any, Deque, Dict, Optional, TypedDict
+from typing import Any, Deque, Dict, List, Literal, Optional, TypedDict, Union
 
-from models.core import AgentGoal, ConversationHistory, NextStep
+from models.core import AgentGoal
+
+# Common type aliases
+
+Message = Dict[str, Union[str, Dict[str, Any]]]
+ConversationHistory = Dict[str, List[Message]]
+NextStep = Literal["confirm", "question", "pick-new-goal", "done"]
+CurrentTool = str
 
 
 class ToolData(TypedDict, total=False):

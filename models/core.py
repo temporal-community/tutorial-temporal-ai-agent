@@ -1,12 +1,5 @@
 from dataclasses import dataclass
-from typing import Any, Dict, List, Literal, Union
-
-# Common type aliases
-
-Message = Dict[str, Union[str, Dict[str, Any]]]
-ConversationHistory = Dict[str, List[Message]]
-NextStep = Literal["confirm", "question", "pick-new-goal", "done"]
-CurrentTool = str
+from typing import List
 
 
 @dataclass
