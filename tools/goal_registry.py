@@ -3,9 +3,7 @@ from models.core import AgentGoal
 
 goal_event_flight_invoice = AgentGoal(
     id="goal_event_flight_invoice",
-    category_tag="travel-flights",
     agent_name="North America Event Flight Booking",
-    agent_friendly_description="Book a trip to a city in North America around the dates of events in that city.",
     tools=[
         tool_registry.find_events_tool,
         tool_registry.search_flights_tool,
