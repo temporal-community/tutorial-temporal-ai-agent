@@ -176,7 +176,7 @@ class ToolActivities:
 
 @activity.defn(dynamic=True)
 async def dynamic_tool_activity(args: Sequence[RawValue]) -> dict:
-    from tools import get_handler
+    from tools.tool_registry import get_handler
 
     tool_name = activity.info().activity_type  # e.g. "FindEvents"
     tool_args = activity.payload_converter().from_payload(args[0].payload, dict)
