@@ -18,7 +18,6 @@ class ToolDefinition:
 
 @dataclass
 class AgentGoal:
-    id: str
     agent_name: str
     tools: List[ToolDefinition]
     description: str

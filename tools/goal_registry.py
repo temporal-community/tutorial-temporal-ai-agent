@@ -2,7 +2,6 @@ import tools.tool_registry as tool_registry
 from models.core import AgentGoal
 
 goal_event_flight_invoice = AgentGoal(
-    id="goal_event_flight_invoice",
     agent_name="North America Event Flight Booking",
     tools=[
         tool_registry.find_events_tool,
@@ -28,10 +27,10 @@ goal_event_flight_invoice = AgentGoal(
             "user: San Francisco",
             "agent: Thanks, searching for flights from San Francisco to New York City around 2023-02-25 to 2023-02-28.",
             "user_confirmed_tool_run: <user clicks confirm on SearchFlights tool>"
-            'tool_result: results including {"flight_number": "CX101", "return_flight_number": "CX102", "price": 850.0}',
-            "agent: Found some flights! The cheapest is CX101 for $850. Would you like to generate an invoice for this flight?",
+            'tool_result: results including {"flight_number": "AA101", "return_flight_number": "AA102", "price": 850.0}',
+            "agent: Found some flights! The cheapest is AA101 for $850. Would you like to generate an invoice for this flight?",
             "user_confirmed_tool_run: <user clicks confirm on CreateInvoice tool>",
-            'tool_result: { "status": "success", "invoice": { "flight_number": "CX101", "amount": 850.0 }, invoiceURL: "https://example.com/invoice" }',
+            'tool_result: { "status": "success", "invoice": { "flight_number": "AA101", "amount": 850.0 }, invoiceURL: "https://example.com/invoice" }',
             "agent: Invoice generated! Here's the link: https://example.com/invoice",
         ]
     ),
