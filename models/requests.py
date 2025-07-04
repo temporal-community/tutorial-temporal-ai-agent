@@ -7,16 +7,8 @@ from models.core import AgentGoal
 
 Message = Dict[str, Union[str, Dict[str, Any]]]
 ConversationHistory = Dict[str, List[Message]]
-NextStep = Literal["confirm", "question", "pick-new-goal", "done"]
+NextStep = Literal["confirm", "question", "done"]
 CurrentTool = str
-
-
-class ToolData(TypedDict, total=False):
-    next: NextStep
-    tool: str
-    response: str
-    args: Dict[str, Any]
-    force_confirm: bool
 
 
 @dataclass
@@ -59,3 +51,11 @@ class EnvLookupInput:
 @dataclass
 class EnvLookupOutput:
     show_confirm: bool
+
+
+class ToolData(TypedDict, total=False):
+    next: NextStep
+    tool: str
+    response: str
+    args: Dict[str, Any]
+    force_confirm: bool

@@ -43,7 +43,7 @@ When all required args for a tool are known, you can propose next='confirm' to r
 Your JSON format must be:
 {
   "response": "<plain text>",
-  "next": "<question|confirm|pick-new-goal|done>",
+  "next": "<question|confirm|done>",
   "tool": "<tool_name or null>",
   "args": {
     "<arg1>": "<value1 or null>",
@@ -93,7 +93,7 @@ containing the list of tools in sequence and the conversation history (and
 previous tool_results) to figure out next steps, if any. 
 You will need to use the tool_results to auto-fill arguments for subsequent 
 tools and also to figure out if all tools have been run. 
-{{"next": "<question|confirm|pick-new-goal|done>", "tool": "<tool_name or null>", "args": {{"<arg1>": "<value1 or null>", "<arg2>": "<value2 or null>"}}, "response": "<plain text (can include \\n line breaks)>"}}
+{{"next": "<question|confirm|done>", "tool": "<tool_name or null>", "args": {{"<arg1>": "<value1 or null>", "<arg2>": "<value2 or null>"}}, "response": "<plain text (can include \\n line breaks)>"}}
 ONLY return those json keys (next, tool, args, response), nothing else. 
 Next should be "question" if the tool is not the last one in the sequence. 
 Next should be "done" if the user is asking to be done with the chat."""
