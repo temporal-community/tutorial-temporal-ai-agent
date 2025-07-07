@@ -6,7 +6,7 @@ from temporalio.common import RetryPolicy
 from temporalio.exceptions import ActivityError
 
 with workflow.unsafe.imports_passed_through():
-    from activities.tool_activities import ToolActivities
+    from activities.activities import AgentActivities
     from models.requests import ConversationHistory, ToolData, ToolPromptInput
     from prompts.agent_prompt_generators import (
         generate_missing_args_prompt,
@@ -103,7 +103,7 @@ async def continue_as_new_if_needed(
             prompt=summary_prompt, context_instructions=summary_context
         )
         conversation_summary = await workflow.start_activity_method(
-            ToolActivities.agent_toolPlanner,
+            AgentActivities.agent_toolPlanner,
             summary_input,
             schedule_to_close_timeout=LLM_ACTIVITY_SCHEDULE_TO_CLOSE_TIMEOUT,
         )

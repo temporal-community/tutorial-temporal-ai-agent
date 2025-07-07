@@ -19,8 +19,8 @@ class AgentGoalWorkflowParams:
 
 @dataclass
 class CombinedInput:
-    tool_params: AgentGoalWorkflowParams
     agent_goal: AgentGoal
+    tool_params: AgentGoalWorkflowParams
 
 
 @dataclass

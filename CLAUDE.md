@@ -11,7 +11,7 @@ This is a Temporal AI Agent tutorial that demonstrates multi-turn conversations 
 The system follows an agentic AI pattern with these key components:
 
 - **Temporal Workflow** (`workflows/agent_goal_workflow.py`): Orchestrates the main agent loop, manages conversation state, handles tool execution, and provides durability
-- **Activities** (`activities/tool_activities.py`): Temporal Activities that execute tools and LLM calls with automatic retry logic
+- **Activities** (`activities/activities.py`): Temporal Activities that execute tools and LLM calls with automatic retry logic
 - **Worker** (`worker/worker.py`): Temporal Worker that executes Workflows and Activities.
 - **Tools** (`tools/`): Python functions that define agent capabilities (find events, search flights, create invoices)
 - **Prompts** (`prompts/`): System prompts and conversation management for LLM interactions

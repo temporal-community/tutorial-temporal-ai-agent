@@ -21,7 +21,7 @@ from workflows.workflow_helpers import (
 )
 
 with workflow.unsafe.imports_passed_through():
-    from activities.tool_activities import ToolActivities
+    from activities.activities import AgentActivities
     from models.requests import CombinedInput, ToolPromptInput
     from prompts.agent_prompt_generators import generate_genai_prompt
 
@@ -111,7 +111,7 @@ class AgentGoalWorkflow:
                         agent_goal=self.goal,
                     )
                     validation_result = await workflow.execute_activity_method(
-                        ToolActivities.agent_validatePrompt,
+                        AgentActivities.agent_validatePrompt,
                         args=[validation_input],
                         schedule_to_close_timeout=LLM_ACTIVITY_SCHEDULE_TO_CLOSE_TIMEOUT,
                         start_to_close_timeout=LLM_ACTIVITY_START_TO_CLOSE_TIMEOUT,
@@ -143,7 +143,7 @@ class AgentGoalWorkflow:
 
                 # connect to LLM and execute to get next steps
                 tool_data = await workflow.execute_activity_method(
-                    ToolActivities.agent_toolPlanner,
+                    AgentActivities.agent_toolPlanner,
                     prompt_input,
                     schedule_to_close_timeout=LLM_ACTIVITY_SCHEDULE_TO_CLOSE_TIMEOUT,
                     start_to_close_timeout=LLM_ACTIVITY_START_TO_CLOSE_TIMEOUT,
@@ -285,7 +285,7 @@ class AgentGoalWorkflow:
             show_confirm_default=True,
         )
         env_output: EnvLookupOutput = await workflow.execute_activity_method(
-            ToolActivities.get_wf_env_vars,
+            AgentActivities.get_wf_env_vars,
             env_lookup_input,
             start_to_close_timeout=LLM_ACTIVITY_START_TO_CLOSE_TIMEOUT,
             retry_policy=RetryPolicy(

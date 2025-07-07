@@ -6,7 +6,7 @@ import os
 from dotenv import load_dotenv
 from temporalio.worker import Worker
 
-from activities.tool_activities import ToolActivities, dynamic_tool_activity
+from activities.activities import AgentActivities, dynamic_tool_activity
 from shared.config import TEMPORAL_TASK_QUEUE, get_temporal_client
 from workflows.agent_goal_workflow import AgentGoalWorkflow
 
@@ -23,8 +23,8 @@ async def main():
     client = await get_temporal_client()
 
     # Initialize the activities class
-    activities = ToolActivities()
-    print(f"ToolActivities initialized with LLM model: {llm_model}")
+    activities = AgentActivities()
+    print(f"AgentActivities initialized with LLM model: {llm_model}")
 
     print("Worker ready to process tasks!")
     logging.basicConfig(level=logging.WARN)

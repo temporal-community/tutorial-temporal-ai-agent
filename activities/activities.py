@@ -20,17 +20,56 @@ from models.requests import (
 load_dotenv(override=True)
 
 
-class ToolActivities:
+class AgentActivities:
     def __init__(self):
         """Initialize LLM client using LiteLLM."""
         self.llm_model = os.environ.get("LLM_MODEL", "openai/gpt-4")
         self.llm_key = os.environ.get("LLM_KEY")
         self.llm_base_url = os.environ.get("LLM_BASE_URL")
         activity.logger.info(
-            f"Initializing ToolActivities with LLM model: {self.llm_model}"
+            f"Initializing AgentActivities with LLM model: {self.llm_model}"
         )
         if self.llm_base_url:
             activity.logger.info(f"Using custom base URL: {self.llm_base_url}")
+
+    @activity.defn
+    async def agent_toolPlanner(self, input: ToolPromptInput) -> dict:
+        messages = [
+            {
+                "role": "system",
+                "content": input.context_instructions
+                + ". The current date is "
+                + datetime.now().strftime("%B %d, %Y"),
+            },
+            {
+                "role": "user",
+                "content": input.prompt,
+            },
+        ]
+
+        try:
+            completion_kwargs = {
+                "model": self.llm_model,
+                "messages": messages,
+                "api_key": self.llm_key,
+            }
+
+            # Add base_url if configured
+            if self.llm_base_url:
+                completion_kwargs["base_url"] = self.llm_base_url
+
+            response = completion(**completion_kwargs)
+
+            response_content = response.choices[0].message.content
+            activity.logger.info(f"LLM response: {response_content}")
+
+            # Use the new sanitize function
+            response_content = self.sanitize_json_response(response_content)
+
+            return self.parse_json_response(response_content)
+        except Exception as e:
+            activity.logger.error(f"Error in LLM completion: {str(e)}")
+            raise
 
     @activity.defn
     async def agent_validatePrompt(
@@ -94,68 +133,6 @@ class ToolActivities:
         )
 
     @activity.defn
-    async def agent_toolPlanner(self, input: ToolPromptInput) -> dict:
-        messages = [
-            {
-                "role": "system",
-                "content": input.context_instructions
-                + ". The current date is "
-                + datetime.now().strftime("%B %d, %Y"),
-            },
-            {
-                "role": "user",
-                "content": input.prompt,
-            },
-        ]
-
-        try:
-            completion_kwargs = {
-                "model": self.llm_model,
-                "messages": messages,
-                "api_key": self.llm_key,
-            }
-
-            # Add base_url if configured
-            if self.llm_base_url:
-                completion_kwargs["base_url"] = self.llm_base_url
-
-            response = completion(**completion_kwargs)
-
-            response_content = response.choices[0].message.content
-            activity.logger.info(f"LLM response: {response_content}")
-
-            # Use the new sanitize function
-            response_content = self.sanitize_json_response(response_content)
-
-            return self.parse_json_response(response_content)
-        except Exception as e:
-            activity.logger.error(f"Error in LLM completion: {str(e)}")
-            raise
-
-    def parse_json_response(self, response_content: str) -> dict:
-        """
-        Parses the JSON response content and returns it as a dictionary.
-        """
-        try:
-            data = json.loads(response_content)
-            return data
-        except json.JSONDecodeError as e:
-            activity.logger.error(f"Invalid JSON: {e}")
-            raise
-
-    def sanitize_json_response(self, response_content: str) -> str:
-        """
-        Sanitizes the response content to ensure it's valid JSON.
-        """
-        # Remove any markdown code block markers
-        response_content = response_content.replace("```json", "").replace("```", "")
-
-        # Remove any leading/trailing whitespace
-        response_content = response_content.strip()
-
-        return response_content
-
-    @activity.defn
     async def get_wf_env_vars(self, input: EnvLookupInput) -> EnvLookupOutput:
         """gets env vars for workflow as an activity result so it's deterministic
         handles default/None
@@ -172,6 +149,29 @@ class ToolActivities:
             output.show_confirm = True
 
         return output
+
+    def sanitize_json_response(self, response_content: str) -> str:
+        """
+        Sanitizes the response content to ensure it's valid JSON.
+        """
+        # Remove any markdown code block markers
+        response_content = response_content.replace("```json", "").replace("```", "")
+
+        # Remove any leading/trailing whitespace
+        response_content = response_content.strip()
+
+        return response_content
+
+    def parse_json_response(self, response_content: str) -> dict:
+        """
+        Parses the JSON response content and returns it as a dictionary.
+        """
+        try:
+            data = json.loads(response_content)
+            return data
+        except json.JSONDecodeError as e:
+            activity.logger.error(f"Invalid JSON: {e}")
+            raise
 
 
 @activity.defn(dynamic=True)
