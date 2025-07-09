@@ -103,3 +103,5 @@ MISSING_ARGS_PROMPT = """### INSTRUCTIONS set next='question', combine
 this response response='{response}' and following missing arguments for tool 
 {current_tool}: {missing_args}. Only provide a valid JSON response without any 
 comments or metadata."""
+
+TOOLCHAIN_COMPLETE_GUIDANCE_PROMPT = "If no more tools are needed (user_confirmed_tool_run has been run for all), set next='done' and tool=''."

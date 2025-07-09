@@ -3,7 +3,12 @@ from typing import Optional
 
 from models.core import AgentGoal
 from models.requests import ConversationHistory, ToolData
-from prompts.prompts import GENAI_PROMPT, MISSING_ARGS_PROMPT, TOOL_COMPLETION_PROMPT
+from prompts.prompts import (
+    GENAI_PROMPT,
+    MISSING_ARGS_PROMPT,
+    TOOL_COMPLETION_PROMPT,
+    TOOLCHAIN_COMPLETE_GUIDANCE_PROMPT,
+)
 
 
 def generate_genai_prompt(
@@ -20,7 +25,7 @@ def generate_genai_prompt(
     template_vars = {
         "agent_goal": agent_goal,
         "conversation_history_json": json.dumps(conversation_history, indent=2),
-        "toolchain_complete_guidance": generate_toolchain_complete_guidance(),
+        "toolchain_complete_guidance": TOOLCHAIN_COMPLETE_GUIDANCE_PROMPT,
         "raw_json": raw_json,
         "raw_json_str": (
             json.dumps(raw_json, indent=2) if raw_json is not None else None
@@ -65,16 +70,3 @@ def generate_missing_args_prompt(
         current_tool=current_tool,
         missing_args=missing_args,
     )
-
-
-def generate_toolchain_complete_guidance() -> str:
-    """
-    Generates a prompt for guiding the LLM to handle the end of the toolchain.
-
-    Args:
-        None
-
-    Returns:
-        str: A prompt string prompting the LLM to prompt for a new goal, or be done
-    """
-    return "If no more tools are needed (user_confirmed_tool_run has been run for all), set next='done' and tool=''."
