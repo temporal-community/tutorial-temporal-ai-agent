@@ -134,3 +134,12 @@ def prompt_summary_with_history(
         'Put the summary in the format { "summary": "<plain text>" }'
     )
     return (context_instructions, actual_prompt)
+
+
+# LLM-tagged prompts start with "###"
+# all others are from the user
+def is_user_prompt(prompt) -> bool:
+    if prompt.startswith("###"):
+        return False
+    else:
+        return True

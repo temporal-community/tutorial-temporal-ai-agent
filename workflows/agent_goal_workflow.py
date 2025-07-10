@@ -101,7 +101,7 @@ class AgentGoalWorkflow:
                 )
 
                 # Validate user-provided prompts
-                if self.is_user_prompt(prompt):
+                if helpers.is_user_prompt(prompt):
                     self.add_message("user", prompt)
 
                     # Validate the prompt before proceeding
@@ -269,14 +269,6 @@ class AgentGoalWorkflow:
     def ready_for_tool_execution(self, waiting_for_confirm: bool) -> bool:
 
         return self.confirmed and waiting_for_confirm and self.tool_data is not None
-
-    # LLM-tagged prompts start with "###"
-    # all others are from the user
-    def is_user_prompt(self, prompt) -> bool:
-        if prompt.startswith("###"):
-            return False
-        else:
-            return True
 
     # look up env settings in an activity so they're part of history
     async def lookup_wf_env_settings(self, combined_input: CombinedInput) -> None:
