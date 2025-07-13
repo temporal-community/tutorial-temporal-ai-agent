@@ -81,7 +81,7 @@
       "description": "Annual New Year's Day parade in Pasadena featuring elaborate floats, marching bands, and equestrian units."
     },
     {
-      "eventName": "Chinese New Year Festival",
+      "eventName": "Lunar New Year Festival",
       "dateFrom": "2025-01-25",
       "dateTo": "2025-02-02",
       "description": "Traditional celebration in Chinatown featuring parades, dragon dances, and cultural performances."
@@ -593,7 +593,7 @@
       "description": "Biannual culinary event featuring prix fixe menus at San Diego's finest restaurants."
     },
     {
-      "eventName": "Chinese New Year Cultural Fair",
+      "eventName": "Lunar New Year Cultural Fair",
       "dateFrom": "2025-02-08",
       "dateTo": "2025-02-09",
       "description": "Traditional celebration featuring dragon dances, cultural performances, and Asian food vendors."
@@ -999,10 +999,10 @@
   ],
   "San Francisco": [
     {
-      "eventName": "Chinese New Year Festival & Parade",
+      "eventName": "Lunar New Year Festival & Parade",
       "dateFrom": "2025-02-08",
       "dateTo": "2025-02-22",
-      "description": "Traditional Chinese New Year celebration featuring parades, dragon dances, cultural performances, and food."
+      "description": "Traditional Lunar New Year celebration featuring parades, dragon dances, cultural performances, and food."
     },
     {
       "eventName": "San Francisco International Film Festival",

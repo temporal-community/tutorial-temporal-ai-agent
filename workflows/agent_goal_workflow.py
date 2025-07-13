@@ -36,15 +36,15 @@ class AgentGoalWorkflow:
     def __init__(self) -> None:
         self.conversation_history: ConversationHistory = {"messages": []}
         self.prompt_queue: Deque[str] = deque()
-        self.conversation_summary: Optional[str] = None
         self.chat_ended: bool = False
         self.tool_data: Optional[ToolData] = None
-        self.confirmed: bool = (
-            False  # indicates that we have confirmation to proceed to run tool
-        )
         self.goal: Optional[AgentGoal] = None
+        self.waiting_for_confirm: bool = False
         self.show_tool_args_confirmation: bool = (
             True  # set from env file in activity lookup_wf_env_settings
+        )
+        self.confirmed: bool = (
+            False  # indicates that we have confirmation to proceed to run tool
         )
 
     # see ../api/main.py#temporal_client.start_workflow() for how the input parameters are set
@@ -55,25 +55,18 @@ class AgentGoalWorkflow:
         params = combined_input.tool_params
         self.goal = combined_input.agent_goal
 
-        await self.lookup_wf_env_settings(combined_input)
-
-        # add message from sample conversation provided in tools/goal_registry.py, if it exists
-        if params and params.conversation_summary:
-            self.add_message("conversation_summary", params.conversation_summary)
-            self.conversation_summary = params.conversation_summary
+        await self.lookup_wf_env_settings()
 
         if params and params.prompt_queue:
             self.prompt_queue.extend(params.prompt_queue)
 
-        waiting_for_confirm: bool = False
         current_tool: Optional[CurrentTool] = None
 
         # This is the main interactive loop. Main responsibilities:
-        #   - Selecting and changing goals as directed by the user
         #   - reacting to user input (from signals)
         #   - validating user input to make sure it makes sense with the current goal and tools
         #   - calling the LLM through activities to determine next steps and prompts
-        #   - executing the selected tools via activities
+        #   - executing the selected tools via Activities
         while True:
             # wait indefinitely for input from signals - user_prompt, end_chat, or confirm as defined below
             await workflow.wait_condition(
@@ -81,15 +74,13 @@ class AgentGoalWorkflow:
             )
 
             # handle chat should end. When chat ends, push conversation history to workflow results.
-            if self.chat_should_end():
+            if self.chat_ended:
+                workflow.logger.info("Chat-end signal received. Chat ending.")
                 return f"{self.conversation_history}"
 
             # Execute the tool
-            if (
-                self.ready_for_tool_execution(waiting_for_confirm)
-                and current_tool is not None
-            ):
-                waiting_for_confirm = await self.execute_tool(current_tool)
+            if self.ready_for_tool_execution() and current_tool is not None:
+                await self.execute_tool(current_tool)
                 continue
 
             # process forward on the prompt queue if any
@@ -172,7 +163,7 @@ class AgentGoalWorkflow:
                     ):
                         continue
 
-                    waiting_for_confirm = True
+                    self.waiting_for_confirm = True
 
                     # We have needed arguments, if we want to force the user to confirm, set that up
                     if self.show_tool_args_confirmation:
@@ -199,6 +190,68 @@ class AgentGoalWorkflow:
                     MAX_TURNS_BEFORE_CONTINUE,
                     self.add_message,
                 )
+
+    # look up env settings in an activity so they're part of history
+    async def lookup_wf_env_settings(self) -> None:
+        env_lookup_input = EnvLookupInput(
+            show_confirm_env_var_name="SHOW_CONFIRM",
+            show_confirm_default=True,
+        )
+        env_output: EnvLookupOutput = await workflow.execute_activity_method(
+            AgentActivities.get_wf_env_vars,
+            env_lookup_input,
+            start_to_close_timeout=LLM_ACTIVITY_START_TO_CLOSE_TIMEOUT,
+            retry_policy=RetryPolicy(
+                initial_interval=timedelta(seconds=5), backoff_coefficient=1
+            ),
+        )
+        self.show_tool_args_confirmation = env_output.show_confirm
+
+    # define if we're ready for tool execution
+    def ready_for_tool_execution(self) -> bool:
+
+        return (
+            self.confirmed and self.waiting_for_confirm and self.tool_data is not None
+        )
+
+    # execute the tool - return False if we're not waiting for confirm anymore
+    # (always the case if it works successfully)
+    async def execute_tool(self, current_tool: CurrentTool) -> None:
+        workflow.logger.info(
+            f"workflow step: user has confirmed, executing the tool {current_tool}"
+        )
+        self.confirmed = False
+
+        confirmed_tool_data = self.tool_data.copy()
+        confirmed_tool_data["next"] = "user_confirmed_tool_run"
+        self.add_message("user_confirmed_tool_run", confirmed_tool_data)
+
+        # execute the tool by key as defined in tools/__init__.py
+        await helpers.handle_tool_execution(
+            current_tool,
+            self.tool_data,
+            self.add_message,
+            self.prompt_queue,
+        )
+
+        self.waiting_for_confirm = False
+
+    def add_message(self, actor: str, response: Union[str, Dict[str, Any]]) -> None:
+        """Add a message to the conversation history.
+
+        Args:
+            actor: The entity that generated the message (e.g., "user", "agent")
+            response: The message content, either as a string or structured data
+        """
+        if isinstance(response, dict):
+            response_str = str(response)
+            workflow.logger.debug(f"Adding {actor} message: {response_str[:100]}...")
+        else:
+            workflow.logger.debug(f"Adding {actor} message: {response[:100]}...")
+
+        self.conversation_history["messages"].append(
+            {"actor": actor, "response": response}
+        )
 
     # Signal that comes from api/main.py via a post to /send-prompt
     @workflow.signal
@@ -230,80 +283,6 @@ class AgentGoalWorkflow:
         return self.conversation_history
 
     @workflow.query
-    def get_summary_from_history(self) -> Optional[str]:
-        """Query handler to retrieve the conversation summary if available.
-        Used only for continue as new of the workflow."""
-        return self.conversation_summary
-
-    @workflow.query
     def get_latest_tool_data(self) -> Optional[ToolData]:
         """Query handler to retrieve the latest tool data response if available."""
         return self.tool_data
-
-    def add_message(self, actor: str, response: Union[str, Dict[str, Any]]) -> None:
-        """Add a message to the conversation history.
-
-        Args:
-            actor: The entity that generated the message (e.g., "user", "agent")
-            response: The message content, either as a string or structured data
-        """
-        if isinstance(response, dict):
-            response_str = str(response)
-            workflow.logger.debug(f"Adding {actor} message: {response_str[:100]}...")
-        else:
-            workflow.logger.debug(f"Adding {actor} message: {response[:100]}...")
-
-        self.conversation_history["messages"].append(
-            {"actor": actor, "response": response}
-        )
-
-    # workflow function that defines if chat should end
-    def chat_should_end(self) -> bool:
-        if self.chat_ended:
-            workflow.logger.info("Chat-end signal received. Chat ending.")
-            return True
-        else:
-            return False
-
-    # define if we're ready for tool execution
-    def ready_for_tool_execution(self, waiting_for_confirm: bool) -> bool:
-
-        return self.confirmed and waiting_for_confirm and self.tool_data is not None
-
-    # look up env settings in an activity so they're part of history
-    async def lookup_wf_env_settings(self, combined_input: CombinedInput) -> None:
-        env_lookup_input = EnvLookupInput(
-            show_confirm_env_var_name="SHOW_CONFIRM",
-            show_confirm_default=True,
-        )
-        env_output: EnvLookupOutput = await workflow.execute_activity_method(
-            AgentActivities.get_wf_env_vars,
-            env_lookup_input,
-            start_to_close_timeout=LLM_ACTIVITY_START_TO_CLOSE_TIMEOUT,
-            retry_policy=RetryPolicy(
-                initial_interval=timedelta(seconds=5), backoff_coefficient=1
-            ),
-        )
-        self.show_tool_args_confirmation = env_output.show_confirm
-
-    # execute the tool - return False if we're not waiting for confirm anymore (always the case if it works successfully)
-    #
-    async def execute_tool(self, current_tool: CurrentTool) -> bool:
-        workflow.logger.info(
-            f"workflow step: user has confirmed, executing the tool {current_tool}"
-        )
-        self.confirmed = False
-        waiting_for_confirm = False
-        confirmed_tool_data = self.tool_data.copy()
-        confirmed_tool_data["next"] = "user_confirmed_tool_run"
-        self.add_message("user_confirmed_tool_run", confirmed_tool_data)
-
-        # execute the tool by key as defined in tools/__init__.py
-        await helpers.handle_tool_execution(
-            current_tool,
-            self.tool_data,
-            self.add_message,
-            self.prompt_queue,
-        )
-
-        return waiting_for_confirm

@@ -13,7 +13,7 @@ with workflow.unsafe.imports_passed_through():
         generate_tool_completion_prompt,
     )
 
-# Constants from original file
+
 TOOL_ACTIVITY_START_TO_CLOSE_TIMEOUT = timedelta(seconds=30)
 TOOL_ACTIVITY_SCHEDULE_TO_CLOSE_TIMEOUT = timedelta(minutes=30)
 LLM_ACTIVITY_START_TO_CLOSE_TIMEOUT = timedelta(seconds=30)
@@ -73,18 +73,18 @@ def format_history(conversation_history: ConversationHistory) -> str:
     return " ".join(str(msg["response"]) for msg in conversation_history["messages"])
 
 
-def prompt_with_history(
-    conversation_history: ConversationHistory, prompt: str
+def prompt_summary_with_history(
+    conversation_history: ConversationHistory,
 ) -> tuple[str, str]:
-    """Generate a context-aware prompt with conversation history."""
+    """Generate a prompt for summarizing the conversation.
+    Used only for continue as new of the workflow."""
     history_string = format_history(conversation_history)
-    context_instructions = (
-        f"Here is the conversation history: {history_string} "
-        "Please add a few sentence response in plain text sentences. "
-        "Don't editorialize or add metadata. "
-        "Keep the text a plain explanation based on the history."
+    context_instructions = f"Here is the conversation history between a user and a chatbot: {history_string}"
+    actual_prompt = (
+        "Please produce a two sentence summary of this conversation. "
+        'Put the summary in the format { "summary": "<plain text>" }'
     )
-    return (context_instructions, prompt)
+    return (context_instructions, actual_prompt)
 
 
 async def continue_as_new_if_needed(
@@ -120,20 +120,6 @@ async def continue_as_new_if_needed(
                 }
             ]
         )
-
-
-def prompt_summary_with_history(
-    conversation_history: ConversationHistory,
-) -> tuple[str, str]:
-    """Generate a prompt for summarizing the conversation.
-    Used only for continue as new of the workflow."""
-    history_string = format_history(conversation_history)
-    context_instructions = f"Here is the conversation history between a user and a chatbot: {history_string}"
-    actual_prompt = (
-        "Please produce a two sentence summary of this conversation. "
-        'Put the summary in the format { "summary": "<plain text>" }'
-    )
-    return (context_instructions, actual_prompt)
 
 
 # LLM-tagged prompts start with "###"
