@@ -214,14 +214,13 @@ class AgentGoalWorkflow:
             self.confirmed and self.waiting_for_confirm and self.tool_data is not None
         )
 
-    # execute the tool - return False if we're not waiting for confirm anymore
+    # execute the tool - set self.waiting_for_confirm to False if we're not waiting for confirm anymore
     # (always the case if it works successfully)
     async def execute_tool(self, current_tool: CurrentTool) -> None:
         workflow.logger.info(
             f"workflow step: user has confirmed, executing the tool {current_tool}"
         )
         self.confirmed = False
-
         confirmed_tool_data = self.tool_data.copy()
         confirmed_tool_data["next"] = "user_confirmed_tool_run"
         self.add_message("user_confirmed_tool_run", confirmed_tool_data)
