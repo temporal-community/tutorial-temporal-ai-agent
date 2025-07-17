@@ -58,7 +58,7 @@ class AgentGoalWorkflow:
         await self.lookup_wf_env_settings()
 
         if params and params.prompt_queue:
-            self.prompt_queue.extend(params.prompt_queue)
+            self.prompt_queue.extend(deque(params.prompt_queue))
 
         current_tool: Optional[CurrentTool] = None
 

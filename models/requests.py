@@ -1,5 +1,5 @@
 from dataclasses import dataclass, field
-from typing import Any, Deque, Dict, List, Literal, Optional, TypedDict, Union
+from typing import Any, Dict, List, Literal, Optional, TypedDict, Union
 
 from models.core import AgentGoal
 
@@ -14,7 +14,7 @@ CurrentTool = str
 @dataclass
 class AgentGoalWorkflowParams:
     conversation_summary: Optional[str] = None
-    prompt_queue: Optional[Deque[str]] = None
+    prompt_queue: Optional[List[str]] = None
 
 
 @dataclass

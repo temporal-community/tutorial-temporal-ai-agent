@@ -47,6 +47,86 @@ def root() -> Dict[str, str]:
     return {"message": "Temporal AI Agent!"}
 
 
+def _ensure_temporal_client() -> Client:
+    """Ensure temporal client is initialized and return it.
+
+    Returns:
+        TemporalClient: The initialized temporal client.
+
+    Raises:
+        HTTPException: If client is not initialized.
+    """
+    if temporal_client is None:
+        raise HTTPException(status_code=500, detail="Temporal client not initialized")
+    return temporal_client
+
+
+@app.post("/start-workflow")
+async def start_workflow() -> Dict[str, str]:
+
+    temporal_client = _ensure_temporal_client()
+
+    # Create combined input
+    combined_input = CombinedInput(
+        tool_params=AgentGoalWorkflowParams(None, [f"### {AGENT_GOAL.starter_prompt}"]),
+        agent_goal=AGENT_GOAL,
+    )
+
+    workflow_id = "agent-workflow"
+
+    # Start the workflow with the starter prompt from the goal
+    await temporal_client.start_workflow(
+        AgentGoalWorkflow.run,
+        combined_input,
+        id=workflow_id,
+        task_queue=TEMPORAL_TASK_QUEUE,
+    )
+
+    return {
+        "message": f"Workflow started with goal's starter prompt: {AGENT_GOAL.starter_prompt}."
+    }
+
+
+@app.post("/send-prompt")
+async def send_prompt(prompt: str) -> Dict[str, str]:
+    """Sends the user prompt to the Workflow"""
+    temporal_client = _ensure_temporal_client()
+
+    workflow_id = "agent-workflow"
+    handle = temporal_client.get_workflow_handle(workflow_id)
+    await handle.signal("user_prompt", prompt)
+
+    return {"message": f"Prompt '{prompt}' sent to workflow {workflow_id}."}
+
+
+@app.post("/confirm")
+async def send_confirm() -> Dict[str, str]:
+    """Sends a 'confirm' signal to the workflow."""
+    temporal_client = _ensure_temporal_client()
+
+    workflow_id = "agent-workflow"
+    handle = temporal_client.get_workflow_handle(workflow_id)
+    await handle.signal("confirm")
+    return {"message": "Confirm signal sent."}
+
+
+@app.post("/end-chat")
+async def end_chat() -> Dict[str, str]:
+    """Sends a 'end_chat' signal to the workflow."""
+    workflow_id = "agent-workflow"
+
+    temporal_client = _ensure_temporal_client()
+
+    try:
+        handle = temporal_client.get_workflow_handle(workflow_id)
+        await handle.signal("end_chat")
+        return {"message": "End chat signal sent."}
+    except TemporalError as e:
+        print(e)
+        # Workflow not found; return an empty response
+        return {}
+
+
 @app.get("/get-conversation-history")
 async def get_conversation_history() -> ConversationHistory:
     """Calls the workflow's 'get_conversation_history' query."""
@@ -98,100 +178,3 @@ async def get_conversation_history() -> ConversationHistory:
             raise HTTPException(
                 status_code=500, detail="Internal server error while querying workflow."
             )
-
-
-@app.post("/send-prompt")
-async def send_prompt(prompt: str) -> Dict[str, str]:
-
-    temporal_client = _ensure_temporal_client()
-
-    # Create combined input with goal from environment
-    combined_input = CombinedInput(
-        tool_params=AgentGoalWorkflowParams(None, None),
-        agent_goal=AGENT_GOAL,
-        # change to get from workflow query
-    )
-
-    workflow_id = "agent-workflow"
-
-    # Start (or signal) the workflow
-    await temporal_client.start_workflow(
-        AgentGoalWorkflow.run,
-        combined_input,
-        id=workflow_id,
-        task_queue=TEMPORAL_TASK_QUEUE,
-        start_signal="user_prompt",
-        start_signal_args=[prompt],
-    )
-
-    return {"message": f"Prompt '{prompt}' sent to workflow {workflow_id}."}
-
-
-@app.post("/confirm")
-async def send_confirm() -> Dict[str, str]:
-    """Sends a 'confirm' signal to the workflow."""
-    temporal_client = _ensure_temporal_client()
-
-    workflow_id = "agent-workflow"
-    handle = temporal_client.get_workflow_handle(workflow_id)
-    await handle.signal("confirm")
-    return {"message": "Confirm signal sent."}
-
-
-@app.post("/end-chat")
-async def end_chat() -> Dict[str, str]:
-    """Sends a 'end_chat' signal to the workflow."""
-    workflow_id = "agent-workflow"
-
-    temporal_client = _ensure_temporal_client()
-
-    try:
-        handle = temporal_client.get_workflow_handle(workflow_id)
-        await handle.signal("end_chat")
-        return {"message": "End chat signal sent."}
-    except TemporalError as e:
-        print(e)
-        # Workflow not found; return an empty response
-        return {}
-
-
-@app.post("/start-workflow")
-async def start_workflow() -> Dict[str, str]:
-
-    temporal_client = _ensure_temporal_client()
-
-    # Create combined input
-    combined_input = CombinedInput(
-        tool_params=AgentGoalWorkflowParams(None, None),
-        agent_goal=AGENT_GOAL,
-    )
-
-    workflow_id = "agent-workflow"
-
-    # Start the workflow with the starter prompt from the goal
-    await temporal_client.start_workflow(
-        AgentGoalWorkflow.run,
-        combined_input,
-        id=workflow_id,
-        task_queue=TEMPORAL_TASK_QUEUE,
-        start_signal="user_prompt",
-        start_signal_args=["### " + AGENT_GOAL.starter_prompt],
-    )
-
-    return {
-        "message": f"Workflow started with goal's starter prompt: {AGENT_GOAL.starter_prompt}."
-    }
-
-
-def _ensure_temporal_client() -> Client:
-    """Ensure temporal client is initialized and return it.
-
-    Returns:
-        TemporalClient: The initialized temporal client.
-
-    Raises:
-        HTTPException: If client is not initialized.
-    """
-    if temporal_client is None:
-        raise HTTPException(status_code=500, detail="Temporal client not initialized")
-    return temporal_client
