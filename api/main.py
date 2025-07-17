@@ -1,4 +1,5 @@
 import asyncio
+from collections import deque
 from contextlib import asynccontextmanager
 from typing import Dict, Optional
 
@@ -68,7 +69,9 @@ async def start_workflow() -> Dict[str, str]:
 
     # Create combined input
     combined_input = CombinedInput(
-        tool_params=AgentGoalWorkflowParams(None, [f"### {AGENT_GOAL.starter_prompt}"]),
+        tool_params=AgentGoalWorkflowParams(
+            None, deque([f"### {AGENT_GOAL.starter_prompt}"])
+        ),
         agent_goal=AGENT_GOAL,
     )
 
