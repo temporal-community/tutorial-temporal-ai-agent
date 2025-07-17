@@ -64,7 +64,7 @@ def _ensure_temporal_client() -> Client:
 
 @app.post("/start-workflow")
 async def start_workflow() -> Dict[str, str]:
-
+    """Start the AgentGoalWorkflow"""
     temporal_client = _ensure_temporal_client()
 
     # Create combined input
@@ -116,18 +116,12 @@ async def send_confirm() -> Dict[str, str]:
 @app.post("/end-chat")
 async def end_chat() -> Dict[str, str]:
     """Sends a 'end_chat' signal to the workflow."""
-    workflow_id = "agent-workflow"
-
     temporal_client = _ensure_temporal_client()
 
-    try:
-        handle = temporal_client.get_workflow_handle(workflow_id)
-        await handle.signal("end_chat")
-        return {"message": "End chat signal sent."}
-    except TemporalError as e:
-        print(e)
-        # Workflow not found; return an empty response
-        return {}
+    workflow_id = "agent-workflow"
+    handle = temporal_client.get_workflow_handle(workflow_id)
+    await handle.signal("end_chat")
+    return {"message": "End chat signal sent."}
 
 
 @app.get("/get-conversation-history")
