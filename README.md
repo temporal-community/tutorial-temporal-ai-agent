@@ -89,9 +89,3 @@ uv run scripts/find_events_test.py
 uv run scripts/search_flights_test.py
 uv run scripts/create_invoice_test.py
 ```
-
-## Interacting with Claude Code
-
-Want to interact with Claude Code and this repository?
-Great!
-We have included a CLAUDE.md file so you can ask it questions and have Claude make changes for you.
