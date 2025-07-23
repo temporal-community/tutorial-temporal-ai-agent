@@ -1,6 +1,5 @@
 # OS-specific files
 .DS_Store
-scratchpad/*
 
 # Python cache & compiled files
 __pycache__/
