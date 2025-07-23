@@ -1,0 +1,1954 @@
+{
+  "New York": [
+    {
+      "eventName": "Winter Jazzfest",
+      "dateFrom": "2025-01-10",
+      "dateTo": "2025-01-19",
+      "description": "A multi-venue jazz festival featuring emerging and established artists performing across Greenwich Village venues."
+    },
+    {
+      "eventName": "New York Auto Show",
+      "dateFrom": "2025-01-25",
+      "dateTo": "2025-02-02",
+      "description": "Annual automotive exhibition showcasing the latest cars, trucks, and concept vehicles from major manufacturers."
+    },
+    {
+      "eventName": "Restaurant Week NYC",
+      "dateFrom": "2025-02-17",
+      "dateTo": "2025-03-02",
+      "description": "Biannual culinary event featuring prix fixe menus at New York's finest restaurants."
+    },
+    {
+      "eventName": "St. Patrick's Day Parade",
+      "dateFrom": "2025-03-17",
+      "dateTo": "2025-03-17",
+      "description": "One of the largest St. Patrick's Day parades in the world marching up Fifth Avenue."
+    },
+    {
+      "eventName": "Tribeca Film Festival",
+      "dateFrom": "2025-04-15",
+      "dateTo": "2025-04-26",
+      "description": "An annual film festival showcasing diverse films, documentaries, and shorts with screenings, premieres, and industry events throughout Manhattan."
+    },
+    {
+      "eventName": "Bike New York Five Boro Bike Tour",
+      "dateFrom": "2025-05-04",
+      "dateTo": "2025-05-04",
+      "description": "Annual cycling event taking riders through all five boroughs of New York City on car-free streets."
+    },
+    {
+      "eventName": "Shakespeare in the Park",
+      "dateFrom": "2025-06-01",
+      "dateTo": "2025-06-14",
+      "description": "Free outdoor Shakespeare performances in Central Park's Delacorte Theater."
+    },
+    {
+      "eventName": "SummerStage Central Park",
+      "dateFrom": "2025-07-01",
+      "dateTo": "2025-07-14",
+      "description": "Free outdoor concerts and performances in Central Park featuring music, dance, and spoken word artists."
+    },
+    {
+      "eventName": "New York International Fringe Festival",
+      "dateFrom": "2025-08-08",
+      "dateTo": "2025-08-24",
+      "description": "Annual theater festival featuring experimental and independent theater productions."
+    },
+    {
+      "eventName": "New York Fashion Week",
+      "dateFrom": "2025-09-08",
+      "dateTo": "2025-09-15",
+      "description": "Semi-annual fashion event showcasing designer collections with runway shows, presentations, and fashion industry gatherings."
+    },
+    {
+      "eventName": "NYC Marathon",
+      "dateFrom": "2025-11-02",
+      "dateTo": "2025-11-02",
+      "description": "World's largest marathon with runners from around the globe racing through all five boroughs."
+    },
+    {
+      "eventName": "Holiday Markets",
+      "dateFrom": "2025-12-01",
+      "dateTo": "2025-12-14",
+      "description": "Seasonal holiday markets throughout the city featuring crafts, food, and holiday shopping."
+    }
+  ],
+  "Los Angeles": [
+    {
+      "eventName": "Rose Parade",
+      "dateFrom": "2025-01-01",
+      "dateTo": "2025-01-01",
+      "description": "Annual New Year's Day parade in Pasadena featuring elaborate floats, marching bands, and equestrian units."
+    },
+    {
+      "eventName": "Lunar New Year Festival",
+      "dateFrom": "2025-01-25",
+      "dateTo": "2025-02-02",
+      "description": "Traditional celebration in Chinatown featuring parades, dragon dances, and cultural performances."
+    },
+    {
+      "eventName": "LA Marathon",
+      "dateFrom": "2025-03-09",
+      "dateTo": "2025-03-09",
+      "description": "Annual marathon running from downtown LA to Santa Monica with thousands of participants."
+    },
+    {
+      "eventName": "Coachella Valley Music Festival",
+      "dateFrom": "2025-04-11",
+      "dateTo": "2025-04-13",
+      "description": "Annual music and arts festival featuring multiple stages, art installations, and diverse musical performances in Indio."
+    },
+    {
+      "eventName": "LA Food & Wine Festival",
+      "dateFrom": "2025-05-22",
+      "dateTo": "2025-05-24",
+      "description": "Culinary festival featuring celebrity chefs, wine tastings, cooking demonstrations, and gourmet food experiences."
+    },
+    {
+      "eventName": "LA Film Festival",
+      "dateFrom": "2025-06-11",
+      "dateTo": "2025-06-21",
+      "description": "Annual film festival showcasing independent films, documentaries, and shorts with industry screenings and panels."
+    },
+    {
+      "eventName": "Summer Concerts at Hollywood Bowl",
+      "dateFrom": "2025-07-15",
+      "dateTo": "2025-07-28",
+      "description": "Summer concert series at the iconic Hollywood Bowl featuring diverse musical performances."
+    },
+    {
+      "eventName": "Nisei Week Japanese Festival",
+      "dateFrom": "2025-08-09",
+      "dateTo": "2025-08-17",
+      "description": "Annual celebration of Japanese-American culture in Little Tokyo with performances, food, and cultural activities."
+    },
+    {
+      "eventName": "LA County Fair",
+      "dateFrom": "2025-09-05",
+      "dateTo": "2025-09-18",
+      "description": "Annual county fair featuring carnival rides, concerts, agricultural exhibits, and food vendors."
+    },
+    {
+      "eventName": "Day of the Dead Festival",
+      "dateFrom": "2025-10-31",
+      "dateTo": "2025-11-02",
+      "description": "Traditional Mexican celebration in various LA neighborhoods honoring deceased loved ones."
+    },
+    {
+      "eventName": "Doo Dah Parade",
+      "dateFrom": "2025-11-23",
+      "dateTo": "2025-11-23",
+      "description": "Quirky alternative parade in Pasadena featuring unusual floats and performances."
+    },
+    {
+      "eventName": "Holiday Light Festival",
+      "dateFrom": "2025-12-15",
+      "dateTo": "2025-12-28",
+      "description": "Holiday light displays and celebrations throughout the greater Los Angeles area."
+    }
+  ],
+  "Chicago": [
+    {
+      "eventName": "Winter Delights Festival",
+      "dateFrom": "2025-01-15",
+      "dateTo": "2025-01-28",
+      "description": "Winter celebration featuring ice sculptures, winter sports, and indoor cultural events throughout the city."
+    },
+    {
+      "eventName": "Chicago Auto Show",
+      "dateFrom": "2025-02-08",
+      "dateTo": "2025-02-17",
+      "description": "Major automotive exhibition featuring the latest vehicles and automotive technology."
+    },
+    {
+      "eventName": "St. Patrick's Day Festival",
+      "dateFrom": "2025-03-15",
+      "dateTo": "2025-03-17",
+      "description": "Annual Irish celebration featuring the dyeing of the Chicago River green and downtown parade."
+    },
+    {
+      "eventName": "Chicago Improv Festival",
+      "dateFrom": "2025-04-23",
+      "dateTo": "2025-04-27",
+      "description": "Comedy festival showcasing improvisation performances from local and international troupes."
+    },
+    {
+      "eventName": "Chicago Spring Festival",
+      "dateFrom": "2025-05-10",
+      "dateTo": "2025-05-18",
+      "description": "Citywide celebration of spring with outdoor concerts, art shows, and community events."
+    },
+    {
+      "eventName": "Chicago Blues Festival",
+      "dateFrom": "2025-06-07",
+      "dateTo": "2025-06-09",
+      "description": "Free blues festival in Grant Park featuring legendary and emerging blues artists."
+    },
+    {
+      "eventName": "Taste of Chicago",
+      "dateFrom": "2025-07-09",
+      "dateTo": "2025-07-13",
+      "description": "Annual food festival featuring Chicago's diverse culinary scene with restaurant booths, live music, and family activities."
+    },
+    {
+      "eventName": "Lollapalooza",
+      "dateFrom": "2025-07-31",
+      "dateTo": "2025-08-03",
+      "description": "Four-day music festival in Grant Park featuring multiple stages with rock, pop, hip-hop, and electronic music artists."
+    },
+    {
+      "eventName": "Chicago Jazz Festival",
+      "dateFrom": "2025-08-28",
+      "dateTo": "2025-08-31",
+      "description": "Free annual jazz festival in Millennium Park featuring local and international jazz musicians across multiple stages."
+    },
+    {
+      "eventName": "Chicago Marathon",
+      "dateFrom": "2025-10-12",
+      "dateTo": "2025-10-12",
+      "description": "Major international marathon drawing runners from around the world through Chicago's neighborhoods."
+    },
+    {
+      "eventName": "Chicago International Film Festival",
+      "dateFrom": "2025-10-16",
+      "dateTo": "2025-10-30",
+      "description": "International film festival showcasing world cinema, documentaries, and short films with premieres and industry events."
+    },
+    {
+      "eventName": "Christkindlmarket Chicago",
+      "dateFrom": "2025-11-21",
+      "dateTo": "2025-12-14",
+      "description": "German-style Christmas market in Daley Plaza featuring traditional crafts, food, and holiday entertainment."
+    }
+  ],
+  "Toronto": [
+    {
+      "eventName": "Winterlicious",
+      "dateFrom": "2025-01-24",
+      "dateTo": "2025-02-06",
+      "description": "Annual culinary event featuring prix fixe menus at Toronto's finest restaurants with special dining experiences."
+    },
+    {
+      "eventName": "Toronto Light Festival",
+      "dateFrom": "2025-02-14",
+      "dateTo": "2025-02-24",
+      "description": "Winter festival featuring interactive light installations throughout the Distillery District."
+    },
+    {
+      "eventName": "Canadian Music Week",
+      "dateFrom": "2025-03-19",
+      "dateTo": "2025-03-23",
+      "description": "Music industry conference and festival featuring showcases, panels, and networking events."
+    },
+    {
+      "eventName": "Hot Docs Canadian International Documentary Festival",
+      "dateFrom": "2025-04-24",
+      "dateTo": "2025-05-04",
+      "description": "Major documentary film festival showcasing the best in documentary filmmaking from around the world."
+    },
+    {
+      "eventName": "Doors Open Toronto",
+      "dateFrom": "2025-05-24",
+      "dateTo": "2025-05-25",
+      "description": "Annual event offering free public access to architecturally, historically, and culturally significant buildings."
+    },
+    {
+      "eventName": "Toronto Jazz Festival",
+      "dateFrom": "2025-06-19",
+      "dateTo": "2025-06-29",
+      "description": "Annual jazz festival featuring outdoor concerts, club performances, and free community events across the city."
+    },
+    {
+      "eventName": "Summerlicious",
+      "dateFrom": "2025-07-11",
+      "dateTo": "2025-07-24",
+      "description": "Summer dining event featuring special menus at Toronto's top restaurants."
+    },
+    {
+      "eventName": "Caribana Festival",
+      "dateFrom": "2025-07-31",
+      "dateTo": "2025-08-04",
+      "description": "Caribbean cultural festival featuring parades, music, dance, and traditional Caribbean cuisine and arts."
+    },
+    {
+      "eventName": "CNE (Canadian National Exhibition)",
+      "dateFrom": "2025-08-15",
+      "dateTo": "2025-08-28",
+      "description": "Annual fair featuring exhibitions, rides, concerts, and food vendors at Exhibition Place."
+    },
+    {
+      "eventName": "Toronto International Film Festival (TIFF)",
+      "dateFrom": "2025-09-05",
+      "dateTo": "2025-09-15",
+      "description": "One of the world's largest film festivals featuring premieres, industry screenings, and celebrity appearances."
+    },
+    {
+      "eventName": "Nuit Blanche Toronto",
+      "dateFrom": "2025-10-04",
+      "dateTo": "2025-10-05",
+      "description": "All-night contemporary art event featuring installations, performances, and exhibitions throughout the city."
+    },
+    {
+      "eventName": "Santa Claus Parade",
+      "dateFrom": "2025-11-16",
+      "dateTo": "2025-11-16",
+      "description": "Annual Christmas parade featuring floats, marching bands, and Santa Claus traveling through downtown Toronto."
+    }
+  ],
+  "Houston": [
+    {
+      "eventName": "Houston Marathon",
+      "dateFrom": "2025-01-19",
+      "dateTo": "2025-01-19",
+      "description": "Major international marathon attracting runners from around the world through Houston's diverse neighborhoods."
+    },
+    {
+      "eventName": "Houston Livestock Show and Rodeo",
+      "dateFrom": "2025-02-25",
+      "dateTo": "2025-03-16",
+      "description": "World's largest livestock show and rodeo featuring competitions, concerts, carnival rides, and western entertainment."
+    },
+    {
+      "eventName": "Art Car Parade",
+      "dateFrom": "2025-04-12",
+      "dateTo": "2025-04-12",
+      "description": "Unique parade featuring decorated art cars, bikes, and other creative vehicles."
+    },
+    {
+      "eventName": "Houston International Festival",
+      "dateFrom": "2025-04-26",
+      "dateTo": "2025-04-27",
+      "description": "Multi-cultural festival celebrating international arts, music, dance, and cuisine from around the world."
+    },
+    {
+      "eventName": "Houston Greek Festival",
+      "dateFrom": "2025-05-15",
+      "dateTo": "2025-05-18",
+      "description": "Annual celebration of Greek culture featuring traditional food, music, dance, and cultural activities."
+    },
+    {
+      "eventName": "Free Press Summer Fest",
+      "dateFrom": "2025-06-07",
+      "dateTo": "2025-06-08",
+      "description": "Annual music festival featuring indie rock, hip-hop, and electronic music artists in downtown Houston."
+    },
+    {
+      "eventName": "Houston Shakespeare Festival",
+      "dateFrom": "2025-07-17",
+      "dateTo": "2025-07-27",
+      "description": "Free outdoor Shakespeare performances in Miller Outdoor Theatre featuring classic and contemporary works."
+    },
+    {
+      "eventName": "Houston Hot Sauce Festival",
+      "dateFrom": "2025-08-23",
+      "dateTo": "2025-08-24",
+      "description": "Spicy festival featuring hot sauce vendors, contests, and fiery food from around the world."
+    },
+    {
+      "eventName": "Houston Dragon Boat Festival",
+      "dateFrom": "2025-09-21",
+      "dateTo": "2025-09-21",
+      "description": "Traditional Chinese festival featuring dragon boat races, cultural performances, and Asian food vendors."
+    },
+    {
+      "eventName": "Houston Oktoberfest",
+      "dateFrom": "2025-10-11",
+      "dateTo": "2025-10-12",
+      "description": "German cultural festival featuring traditional music, dance, food, beer, and family activities."
+    },
+    {
+      "eventName": "Houston Cinema Arts Festival",
+      "dateFrom": "2025-11-07",
+      "dateTo": "2025-11-16",
+      "description": "Film festival focusing on documentaries and narrative films exploring arts, culture, and social issues."
+    },
+    {
+      "eventName": "Zoo Lights",
+      "dateFrom": "2025-12-05",
+      "dateTo": "2025-12-18",
+      "description": "Holiday light display at Houston Zoo featuring illuminated animal sculptures and family activities."
+    }
+  ],
+  "Philadelphia": [
+    {
+      "eventName": "Mummers Parade",
+      "dateFrom": "2025-01-01",
+      "dateTo": "2025-01-01",
+      "description": "Traditional New Year's Day parade featuring elaborate costumes, music, and performances by Mummers clubs."
+    },
+    {
+      "eventName": "Philadelphia Flower Show",
+      "dateFrom": "2025-02-22",
+      "dateTo": "2025-03-02",
+      "description": "America's largest indoor flower show featuring elaborate garden displays, competitions, and horticultural exhibits."
+    },
+    {
+      "eventName": "St. Patrick's Day Parade",
+      "dateFrom": "2025-03-16",
+      "dateTo": "2025-03-16",
+      "description": "Annual Irish celebration parade through Center City Philadelphia."
+    },
+    {
+      "eventName": "Philadelphia International Festival of the Arts",
+      "dateFrom": "2025-04-03",
+      "dateTo": "2025-04-13",
+      "description": "Multi-disciplinary arts festival featuring theater, dance, music, visual arts, and literary events citywide."
+    },
+    {
+      "eventName": "Broad Street Run",
+      "dateFrom": "2025-05-04",
+      "dateTo": "2025-05-04",
+      "description": "Annual 10-mile race down Broad Street attracting thousands of runners from around the region."
+    },
+    {
+      "eventName": "Welcome America Festival",
+      "dateFrom": "2025-06-29",
+      "dateTo": "2025-07-04",
+      "description": "Independence Day celebration featuring concerts, historical reenactments, and family activities."
+    },
+    {
+      "eventName": "Wawa Welcome America Concert",
+      "dateFrom": "2025-07-04",
+      "dateTo": "2025-07-04",
+      "description": "Free Fourth of July concert on the Benjamin Franklin Parkway with fireworks finale."
+    },
+    {
+      "eventName": "Philadelphia Folk Festival",
+      "dateFrom": "2025-08-14",
+      "dateTo": "2025-08-17",
+      "description": "Annual folk music festival featuring traditional and contemporary folk artists with camping and family activities."
+    },
+    {
+      "eventName": "Made in America Festival",
+      "dateFrom": "2025-09-06",
+      "dateTo": "2025-09-07",
+      "description": "Music festival on Benjamin Franklin Parkway featuring hip-hop, rock, and pop artists across multiple stages."
+    },
+    {
+      "eventName": "Outfest Philadelphia",
+      "dateFrom": "2025-10-09",
+      "dateTo": "2025-10-12",
+      "description": "LGBTQ+ film festival and cultural celebration featuring screenings and community events."
+    },
+    {
+      "eventName": "Philadelphia Marathon",
+      "dateFrom": "2025-11-23",
+      "dateTo": "2025-11-23",
+      "description": "Annual marathon through Philadelphia's historic neighborhoods and landmarks."
+    },
+    {
+      "eventName": "Christmas Village",
+      "dateFrom": "2025-11-28",
+      "dateTo": "2025-12-14",
+      "description": "German-style Christmas market at City Hall featuring holiday shopping, food, and entertainment."
+    }
+  ],
+  "Phoenix": [
+    {
+      "eventName": "Barrett-Jackson Auto Auction",
+      "dateFrom": "2025-01-18",
+      "dateTo": "2025-01-26",
+      "description": "World's premier collector car auction featuring classic and exotic automobiles."
+    },
+    {
+      "eventName": "Waste Management Phoenix Open",
+      "dateFrom": "2025-02-03",
+      "dateTo": "2025-02-09",
+      "description": "PGA Tour golf tournament known for its party atmosphere at the famous 16th hole."
+    },
+    {
+      "eventName": "Scottsdale Arts Festival",
+      "dateFrom": "2025-03-07",
+      "dateTo": "2025-03-09",
+      "description": "Annual arts festival featuring visual arts, live music, performing arts, and culinary experiences."
+    },
+    {
+      "eventName": "Phoenix Film Festival",
+      "dateFrom": "2025-04-03",
+      "dateTo": "2025-04-13",
+      "description": "Independent film festival showcasing narrative features, documentaries, shorts, and animated films."
+    },
+    {
+      "eventName": "Phoenix Fan Fusion",
+      "dateFrom": "2025-05-22",
+      "dateTo": "2025-05-25",
+      "description": "Pop culture convention featuring comics, gaming, sci-fi, fantasy, anime, and celebrity appearances."
+    },
+    {
+      "eventName": "Juneteenth Festival Phoenix",
+      "dateFrom": "2025-06-19",
+      "dateTo": "2025-06-21",
+      "description": "Celebration of African American freedom and culture with music, food, and community activities."
+    },
+    {
+      "eventName": "Phoenix Mercury Season",
+      "dateFrom": "2025-07-15",
+      "dateTo": "2025-07-28",
+      "description": "WNBA basketball games featuring the Phoenix Mercury at their home venue."
+    },
+    {
+      "eventName": "First Fridays Art Walk",
+      "dateFrom": "2025-08-01",
+      "dateTo": "2025-08-01",
+      "description": "Monthly downtown art walk featuring galleries, studios, street performers, and local vendors."
+    },
+    {
+      "eventName": "Phoenix Greek Festival",
+      "dateFrom": "2025-09-19",
+      "dateTo": "2025-09-21",
+      "description": "Annual celebration of Greek culture featuring traditional food, music, dance, and cultural activities."
+    },
+    {
+      "eventName": "Arizona State Fair",
+      "dateFrom": "2025-10-10",
+      "dateTo": "2025-10-23",
+      "description": "Annual state fair featuring carnival rides, live entertainment, agricultural exhibits, and local food vendors."
+    },
+    {
+      "eventName": "Dia de los Muertos Phoenix",
+      "dateFrom": "2025-11-01",
+      "dateTo": "2025-11-02",
+      "description": "Traditional Mexican celebration honoring deceased loved ones with altars, music, and cultural activities."
+    },
+    {
+      "eventName": "Las Noches de las Luminarias",
+      "dateFrom": "2025-12-06",
+      "dateTo": "2025-12-14",
+      "description": "Holiday light display at Desert Botanical Garden featuring thousands of luminarias and winter activities."
+    }
+  ],
+  "San Antonio": [
+    {
+      "eventName": "San Antonio Stock Show & Rodeo",
+      "dateFrom": "2025-02-06",
+      "dateTo": "2025-02-23",
+      "description": "Annual rodeo and livestock show featuring competitions, concerts, carnival, and western entertainment."
+    },
+    {
+      "eventName": "Mardi Gras San Antonio",
+      "dateFrom": "2025-02-15",
+      "dateTo": "2025-03-04",
+      "description": "Carnival celebration featuring parades, masked balls, and festive events throughout the city."
+    },
+    {
+      "eventName": "San Antonio Festival of Films",
+      "dateFrom": "2025-03-13",
+      "dateTo": "2025-03-16",
+      "description": "Independent film festival showcasing local and regional filmmakers with screenings and workshops."
+    },
+    {
+      "eventName": "Fiesta San Antonio",
+      "dateFrom": "2025-04-17",
+      "dateTo": "2025-04-27",
+      "description": "City-wide celebration honoring San Antonio's rich heritage with parades, music, food, and cultural events."
+    },
+    {
+      "eventName": "Cinco de Mayo Festival",
+      "dateFrom": "2025-05-03",
+      "dateTo": "2025-05-05",
+      "description": "Mexican cultural celebration featuring traditional music, dance, food, and family activities."
+    },
+    {
+      "eventName": "Juneteenth Festival",
+      "dateFrom": "2025-06-19",
+      "dateTo": "2025-06-21",
+      "description": "Celebration of African American freedom and heritage with music, food, and educational activities."
+    },
+    {
+      "eventName": "San Antonio Film Festival",
+      "dateFrom": "2025-07-31",
+      "dateTo": "2025-08-03",
+      "description": "Independent film festival showcasing local and international films with screenings and filmmaker discussions."
+    },
+    {
+      "eventName": "Jazz'SAlive Festival",
+      "dateFrom": "2025-09-27",
+      "dateTo": "2025-09-28",
+      "description": "Free jazz festival in Travis Park featuring national and local jazz artists with multiple stages."
+    },
+    {
+      "eventName": "Dia de los Muertos Festival",
+      "dateFrom": "2025-10-31",
+      "dateTo": "2025-11-02",
+      "description": "Traditional Mexican celebration honoring deceased loved ones with altars, music, dance, and cultural activities."
+    },
+    {
+      "eventName": "Ford Holiday River Parade",
+      "dateFrom": "2025-11-29",
+      "dateTo": "2025-11-29",
+      "description": "Holiday-themed boat parade along the San Antonio River featuring decorated floats and festive entertainment."
+    },
+    {
+      "eventName": "Las Posadas",
+      "dateFrom": "2025-12-15",
+      "dateTo": "2025-12-24",
+      "description": "Traditional Mexican Christmas celebration with processions, music, and cultural activities throughout the city."
+    }
+  ],
+  "San Diego": [
+    {
+      "eventName": "San Diego Restaurant Week",
+      "dateFrom": "2025-01-19",
+      "dateTo": "2025-01-26",
+      "description": "Biannual culinary event featuring prix fixe menus at San Diego's finest restaurants."
+    },
+    {
+      "eventName": "Lunar New Year Cultural Fair",
+      "dateFrom": "2025-02-08",
+      "dateTo": "2025-02-09",
+      "description": "Traditional celebration featuring dragon dances, cultural performances, and Asian food vendors."
+    },
+    {
+      "eventName": "San Diego Latino Film Festival",
+      "dateFrom": "2025-03-13",
+      "dateTo": "2025-03-23",
+      "description": "Film festival celebrating Latino cinema and culture with screenings and community events."
+    },
+    {
+      "eventName": "Earth Day Festival",
+      "dateFrom": "2025-04-19",
+      "dateTo": "2025-04-20",
+      "description": "Environmental awareness festival in Balboa Park featuring eco-friendly vendors and educational activities."
+    },
+    {
+      "eventName": "Cinco de Mayo Festival",
+      "dateFrom": "2025-05-03",
+      "dateTo": "2025-05-05",
+      "description": "Mexican cultural celebration in Old Town featuring traditional music, dance, food, and family activities."
+    },
+    {
+      "eventName": "San Diego County Fair",
+      "dateFrom": "2025-06-14",
+      "dateTo": "2025-06-28",
+      "description": "Annual county fair featuring carnival rides, concerts, agricultural exhibits, competitions, and food."
+    },
+    {
+      "eventName": "Comic-Con International",
+      "dateFrom": "2025-07-17",
+      "dateTo": "2025-07-20",
+      "description": "World's largest comic and pop culture convention featuring comics, movies, TV, gaming, and celebrity panels."
+    },
+    {
+      "eventName": "San Diego Pride Festival",
+      "dateFrom": "2025-07-26",
+      "dateTo": "2025-07-27",
+      "description": "Annual LGBTQ+ celebration featuring a parade, live music, vendors, and community activities."
+    },
+    {
+      "eventName": "San Diego Beer Week",
+      "dateFrom": "2025-08-15",
+      "dateTo": "2025-08-24",
+      "description": "Celebration of San Diego's craft beer scene with tastings, special events, and brewery tours."
+    },
+    {
+      "eventName": "Dia de los Muertos Festival",
+      "dateFrom": "2025-10-31",
+      "dateTo": "2025-11-02",
+      "description": "Traditional Mexican celebration in Old Town honoring deceased loved ones with altars and cultural activities."
+    },
+    {
+      "eventName": "San Diego International Film Festival",
+      "dateFrom": "2025-10-15",
+      "dateTo": "2025-10-19",
+      "description": "Film festival showcasing independent films, documentaries, and shorts with industry panels and events."
+    },
+    {
+      "eventName": "Balboa Park December Nights",
+      "dateFrom": "2025-12-06",
+      "dateTo": "2025-12-07",
+      "description": "Free holiday celebration in Balboa Park with cultural performances, food, crafts, and museum access."
+    }
+  ],
+  "Dallas": [
+    {
+      "eventName": "AT&T Cotton Bowl Classic",
+      "dateFrom": "2025-01-01",
+      "dateTo": "2025-01-01",
+      "description": "Annual college football bowl game featuring top-ranked teams at AT&T Stadium."
+    },
+    {
+      "eventName": "Dallas Auto Show",
+      "dateFrom": "2025-01-23",
+      "dateTo": "2025-02-02",
+      "description": "Annual automotive exhibition featuring the latest cars, trucks, and concept vehicles."
+    },
+    {
+      "eventName": "North Texas Irish Festival",
+      "dateFrom": "2025-03-07",
+      "dateTo": "2025-03-09",
+      "description": "Celebration of Irish culture featuring traditional music, dance, food, and cultural activities."
+    },
+    {
+      "eventName": "Dallas International Film Festival",
+      "dateFrom": "2025-04-10",
+      "dateTo": "2025-04-20",
+      "description": "Film festival showcasing independent and international cinema with premieres, panels, and industry events."
+    },
+    {
+      "eventName": "Deep Ellum Arts Festival",
+      "dateFrom": "2025-04-12",
+      "dateTo": "2025-04-13",
+      "description": "Annual arts festival in Deep Ellum featuring live music, visual arts, street performers, and local vendors."
+    },
+    {
+      "eventName": "Cinco de Mayo Festival",
+      "dateFrom": "2025-05-03",
+      "dateTo": "2025-05-05",
+      "description": "Mexican cultural celebration featuring traditional music, dance, food, and family activities."
+    },
+    {
+      "eventName": "Summer Concert Series",
+      "dateFrom": "2025-06-15",
+      "dateTo": "2025-06-28",
+      "description": "Free outdoor concerts in various Dallas parks featuring diverse musical genres and local artists."
+    },
+    {
+      "eventName": "Dallas Symphony Orchestra Summer Series",
+      "dateFrom": "2025-07-10",
+      "dateTo": "2025-07-24",
+      "description": "Classical music performances by the Dallas Symphony Orchestra in outdoor venues."
+    },
+    {
+      "eventName": "Dallas Pride Festival",
+      "dateFrom": "2025-09-21",
+      "dateTo": "2025-09-21",
+      "description": "Annual LGBTQ+ celebration featuring a parade, live music, vendors, and community activities."
+    },
+    {
+      "eventName": "State Fair of Texas",
+      "dateFrom": "2025-09-26",
+      "dateTo": "2025-10-19",
+      "description": "Annual state fair featuring carnival rides, live music, agricultural exhibits, competitions, and famous food."
+    },
+    {
+      "eventName": "White Rock Marathon",
+      "dateFrom": "2025-12-07",
+      "dateTo": "2025-12-07",
+      "description": "Annual marathon and running events around White Rock Lake attracting runners from across the region."
+    },
+    {
+      "eventName": "Dallas Zoo Lights",
+      "dateFrom": "2025-11-22",
+      "dateTo": "2025-12-05",
+      "description": "Holiday light display at Dallas Zoo featuring illuminated animal sculptures and family-friendly activities."
+    }
+  ],
+  "San Jose": [
+    {
+      "eventName": "Lunar New Year Festival",
+      "dateFrom": "2025-01-25",
+      "dateTo": "2025-02-02",
+      "description": "Traditional Asian New Year celebration featuring cultural performances, food vendors, and family activities."
+    },
+    {
+      "eventName": "San Jose Jazz Winter Fest",
+      "dateFrom": "2025-02-14",
+      "dateTo": "2025-02-16",
+      "description": "Indoor jazz festival featuring local and national jazz artists in intimate venue settings."
+    },
+    {
+      "eventName": "Cinequest Film Festival",
+      "dateFrom": "2025-03-05",
+      "dateTo": "2025-03-16",
+      "description": "International film festival showcasing innovative cinema, virtual reality experiences, and tech integration."
+    },
+    {
+      "eventName": "Silicon Valley Comic Con",
+      "dateFrom": "2025-04-04",
+      "dateTo": "2025-04-06",
+      "description": "Pop culture convention celebrating comics, science fiction, technology, and entertainment with celebrity guests."
+    },
+    {
+      "eventName": "Cinco de Mayo Celebration",
+      "dateFrom": "2025-05-03",
+      "dateTo": "2025-05-05",
+      "description": "Mexican cultural festival featuring traditional music, dance, food, and family activities."
+    },
+    {
+      "eventName": "San Jose Music in the Park",
+      "dateFrom": "2025-06-10",
+      "dateTo": "2025-06-24",
+      "description": "Free outdoor concert series in downtown San Jose parks featuring diverse musical genres."
+    },
+    {
+      "eventName": "Obon Festival",
+      "dateFrom": "2025-07-19",
+      "dateTo": "2025-07-20",
+      "description": "Japanese Buddhist festival honoring ancestors with traditional dancing, food, and cultural activities."
+    },
+    {
+      "eventName": "San Jose Jazz Summer Fest",
+      "dateFrom": "2025-08-08",
+      "dateTo": "2025-08-10",
+      "description": "Annual jazz festival featuring multiple stages with jazz, blues, R&B, and world music artists."
+    },
+    {
+      "eventName": "San Jose Greek Festival",
+      "dateFrom": "2025-09-12",
+      "dateTo": "2025-09-14",
+      "description": "Annual celebration of Greek culture featuring traditional food, music, dance, and cultural activities."
+    },
+    {
+      "eventName": "San Jose Dia de los Muertos Festival",
+      "dateFrom": "2025-10-26",
+      "dateTo": "2025-10-27",
+      "description": "Community celebration of Mexican tradition with altars, music, dance, food, and cultural activities."
+    },
+    {
+      "eventName": "Holiday Ice Rink",
+      "dateFrom": "2025-11-28",
+      "dateTo": "2025-12-14",
+      "description": "Outdoor ice skating rink in downtown San Jose with holiday decorations and family activities."
+    }
+  ],
+  "Austin": [
+    {
+      "eventName": "Austin Marathon",
+      "dateFrom": "2025-02-16",
+      "dateTo": "2025-02-16",
+      "description": "Annual marathon through Austin's scenic routes attracting runners from around the world."
+    },
+    {
+      "eventName": "South by Southwest (SXSW)",
+      "dateFrom": "2025-03-07",
+      "dateTo": "2025-03-16",
+      "description": "Annual conference and festival featuring music, interactive media, and film with panels, showcases, and networking."
+    },
+    {
+      "eventName": "Austin Food + Wine Festival",
+      "dateFrom": "2025-04-25",
+      "dateTo": "2025-04-27",
+      "description": "Culinary festival featuring celebrity chefs, wine tastings, cooking demonstrations, and local food experiences."
+    },
+    {
+      "eventName": "Eeyore's Birthday Party",
+      "dateFrom": "2025-05-03",
+      "dateTo": "2025-05-03",
+      "description": "Annual spring festival in Pease Park celebrating the Winnie the Pooh character with music and family fun."
+    },
+    {
+      "eventName": "Austin City Music Festival",
+      "dateFrom": "2025-06-14",
+      "dateTo": "2025-06-15",
+      "description": "Free summer music festival featuring local bands and artists across multiple stages in downtown Austin."
+    },
+    {
+      "eventName": "Keep Austin Weird Festival",
+      "dateFrom": "2025-07-26",
+      "dateTo": "2025-07-27",
+      "description": "Celebration of Austin's unique culture featuring local artists, musicians, food trucks, and quirky performances."
+    },
+    {
+      "eventName": "Austin Pride Festival",
+      "dateFrom": "2025-08-23",
+      "dateTo": "2025-08-24",
+      "description": "Annual LGBTQ+ celebration featuring a parade, live music, vendors, and community activities."
+    },
+    {
+      "eventName": "Fantastic Fest",
+      "dateFrom": "2025-09-19",
+      "dateTo": "2025-09-26",
+      "description": "Genre film festival focusing on horror, fantasy, sci-fi, and action films with premieres and special events."
+    },
+    {
+      "eventName": "Austin City Limits Music Festival",
+      "dateFrom": "2025-10-03",
+      "dateTo": "2025-10-05",
+      "description": "Annual music festival in Zilker Park featuring multiple stages with diverse musical genres and local food."
+    },
+    {
+      "eventName": "Formula 1 United States Grand Prix",
+      "dateFrom": "2025-10-24",
+      "dateTo": "2025-10-26",
+      "description": "Formula 1 racing weekend at Circuit of the Americas featuring international auto racing competition."
+    },
+    {
+      "eventName": "Austin Celtic Festival",
+      "dateFrom": "2025-11-08",
+      "dateTo": "2025-11-09",
+      "description": "Celebration of Celtic culture featuring traditional music, dance, crafts, and Irish food."
+    },
+    {
+      "eventName": "Trail of Lights",
+      "dateFrom": "2025-12-05",
+      "dateTo": "2025-12-23",
+      "description": "Holiday light display in Zilker Park featuring festive decorations, food vendors, and family activities."
+    }
+  ],
+  "Jacksonville": [
+    {
+      "eventName": "Jacksonville Light Boat Parade",
+      "dateFrom": "2025-01-04",
+      "dateTo": "2025-01-04",
+      "description": "Holiday boat parade along the St. Johns River featuring decorated boats and waterfront festivities."
+    },
+    {
+      "eventName": "Jacksonville Jazz Festival",
+      "dateFrom": "2025-05-23",
+      "dateTo": "2025-05-26",
+      "description": "Free outdoor jazz festival featuring national and local jazz artists across multiple stages in downtown Jacksonville."
+    },
+    {
+      "eventName": "Springing the Blues Festival",
+      "dateFrom": "2025-04-05",
+      "dateTo": "2025-04-06",
+      "description": "Annual blues festival on Jacksonville Beach featuring national blues artists and local musicians."
+    },
+    {
+      "eventName": "World of Nations Celebration",
+      "dateFrom": "2025-04-26",
+      "dateTo": "2025-04-27",
+      "description": "Multicultural festival celebrating Jacksonville's diverse communities with food, music, dance, and cultural displays."
+    },
+    {
+      "eventName": "Jacksonville Film Festival",
+      "dateFrom": "2025-09-05",
+      "dateTo": "2025-09-08",
+      "description": "Independent film festival showcasing regional and international films with screenings and filmmaker discussions."
+    }
+  ],
+  "Fort Worth": [
+    {
+      "eventName": "Fort Worth Stock Show & Rodeo",
+      "dateFrom": "2025-01-17",
+      "dateTo": "2025-02-08",
+      "description": "Annual rodeo and livestock show featuring competitions, concerts, carnival rides, and western entertainment."
+    },
+    {
+      "eventName": "Main St. Arts Festival",
+      "dateFrom": "2025-04-12",
+      "dateTo": "2025-04-13",
+      "description": "Annual arts festival featuring visual arts, live music, street performers, and family-friendly activities."
+    },
+    {
+      "eventName": "Mayfest Fort Worth",
+      "dateFrom": "2025-05-01",
+      "dateTo": "2025-05-04",
+      "description": "Annual festival along the Trinity River featuring live music, arts and crafts, food vendors, and family activities."
+    },
+    {
+      "eventName": "Fort Worth Greek Festival",
+      "dateFrom": "2025-09-19",
+      "dateTo": "2025-09-21",
+      "description": "Annual celebration of Greek culture featuring traditional food, music, dance, and cultural demonstrations."
+    }
+  ],
+  "Columbus": [
+    {
+      "eventName": "Arnold Sports Festival",
+      "dateFrom": "2025-03-06",
+      "dateTo": "2025-03-09",
+      "description": "Multi-sport festival featuring bodybuilding, powerlifting, martial arts, and various fitness competitions."
+    },
+    {
+      "eventName": "Columbus Arts Festival",
+      "dateFrom": "2025-06-06",
+      "dateTo": "2025-06-08",
+      "description": "Annual arts festival in downtown Columbus featuring visual arts, live music, and performing arts."
+    },
+    {
+      "eventName": "Ohio State Fair",
+      "dateFrom": "2025-07-23",
+      "dateTo": "2025-08-03",
+      "description": "Annual state fair featuring agricultural exhibits, carnival rides, live entertainment, competitions, and local food."
+    },
+    {
+      "eventName": "Dublin Irish Festival",
+      "dateFrom": "2025-08-01",
+      "dateTo": "2025-08-03",
+      "description": "Annual celebration of Irish culture featuring traditional music, dance, food, and cultural activities."
+    },
+    {
+      "eventName": "Columbus International Festival",
+      "dateFrom": "2025-11-07",
+      "dateTo": "2025-11-08",
+      "description": "Multicultural festival celebrating the diverse communities of Columbus with food, music, dance, and arts."
+    }
+  ],
+  "Charlotte": [
+    {
+      "eventName": "Charlotte Marathon",
+      "dateFrom": "2025-11-16",
+      "dateTo": "2025-11-16",
+      "description": "Annual marathon through Charlotte's neighborhoods attracting runners from across the region."
+    },
+    {
+      "eventName": "Charlotte Jazz Festival",
+      "dateFrom": "2025-04-04",
+      "dateTo": "2025-04-06",
+      "description": "Annual jazz festival featuring national and local jazz artists with outdoor concerts and indoor performances."
+    },
+    {
+      "eventName": "Charlotte Pride Festival",
+      "dateFrom": "2025-08-16",
+      "dateTo": "2025-08-17",
+      "description": "Annual LGBTQ+ celebration featuring a parade, live music, vendors, and community activities."
+    },
+    {
+      "eventName": "Festival in the Park",
+      "dateFrom": "2025-09-26",
+      "dateTo": "2025-09-28",
+      "description": "Annual arts and music festival in Freedom Park featuring live music, visual arts, food vendors, and family activities."
+    },
+    {
+      "eventName": "Charlotte Film Festival",
+      "dateFrom": "2025-10-17",
+      "dateTo": "2025-10-20",
+      "description": "Independent film festival showcasing regional and international films with screenings and industry events."
+    }
+  ],
+  "San Francisco": [
+    {
+      "eventName": "Lunar New Year Festival & Parade",
+      "dateFrom": "2025-02-08",
+      "dateTo": "2025-02-22",
+      "description": "Traditional Lunar New Year celebration featuring parades, dragon dances, cultural performances, and food."
+    },
+    {
+      "eventName": "San Francisco International Film Festival",
+      "dateFrom": "2025-04-17",
+      "dateTo": "2025-05-01",
+      "description": "Longest-running film festival in the Americas showcasing international cinema, documentaries, and shorts."
+    },
+    {
+      "eventName": "Bay to Breakers",
+      "dateFrom": "2025-05-18",
+      "dateTo": "2025-05-18",
+      "description": "Annual footrace and festival from the Bay to Ocean Beach featuring costumes, music, and community spirit."
+    },
+    {
+      "eventName": "San Francisco Pride",
+      "dateFrom": "2025-06-28",
+      "dateTo": "2025-06-29",
+      "description": "Annual LGBTQ+ celebration featuring parade, festival, live music, and community activities."
+    },
+    {
+      "eventName": "Outside Lands Music Festival",
+      "dateFrom": "2025-08-08",
+      "dateTo": "2025-08-10",
+      "description": "Annual music festival in Golden Gate Park featuring multiple stages with diverse musical genres and local food."
+    },
+    {
+      "eventName": "Hardly Strictly Bluegrass",
+      "dateFrom": "2025-10-03",
+      "dateTo": "2025-10-05",
+      "description": "Free music festival in Golden Gate Park featuring bluegrass, folk, and Americana artists."
+    },
+    {
+      "eventName": "Fleet Week San Francisco",
+      "dateFrom": "2025-10-09",
+      "dateTo": "2025-10-13",
+      "description": "Annual celebration honoring military service with air shows, ship tours, and maritime demonstrations."
+    }
+  ],
+  "Indianapolis": [
+    {
+      "eventName": "Indianapolis 500",
+      "dateFrom": "2025-05-25",
+      "dateTo": "2025-05-25",
+      "description": "World's largest single-day sporting event featuring IndyCar racing, concerts, and motorsports activities."
+    },
+    {
+      "eventName": "Broad Ripple Art Fair",
+      "dateFrom": "2025-05-17",
+      "dateTo": "2025-05-18",
+      "description": "Annual arts festival featuring visual arts, live music, food vendors, and family-friendly activities."
+    },
+    {
+      "eventName": "Indiana State Fair",
+      "dateFrom": "2025-08-01",
+      "dateTo": "2025-08-17",
+      "description": "Annual state fair featuring agricultural exhibits, carnival rides, live entertainment, and competitions."
+    },
+    {
+      "eventName": "Indy Jazz Fest",
+      "dateFrom": "2025-09-19",
+      "dateTo": "2025-09-21",
+      "description": "Annual jazz festival featuring national and local jazz artists with outdoor concerts and educational programs."
+    }
+  ],
+  "Seattle": [
+    {
+      "eventName": "Seattle Cherry Blossom Festival",
+      "dateFrom": "2025-04-18",
+      "dateTo": "2025-04-27",
+      "description": "Celebration of Japanese culture and cherry blossoms featuring performances, food, arts, and cultural activities."
+    },
+    {
+      "eventName": "Seattle International Film Festival",
+      "dateFrom": "2025-05-15",
+      "dateTo": "2025-05-29",
+      "description": "One of the largest film festivals in North America showcasing international cinema, documentaries, and shorts."
+    },
+    {
+      "eventName": "Seafair",
+      "dateFrom": "2025-06-28",
+      "dateTo": "2025-07-12",
+      "description": "Summer festival featuring hydroplane races, air shows, parades, and community events across Seattle."
+    },
+    {
+      "eventName": "Bumbershoot",
+      "dateFrom": "2025-09-06",
+      "dateTo": "2025-09-07",
+      "description": "Annual music and arts festival at Seattle Center featuring multiple stages with diverse musical genres and arts."
+    }
+  ],
+  "Denver": [
+    {
+      "eventName": "Denver Restaurant Week",
+      "dateFrom": "2025-02-21",
+      "dateTo": "2025-03-02",
+      "description": "Annual culinary event featuring prix fixe menus at Denver's finest restaurants with special dining experiences."
+    },
+    {
+      "eventName": "Cherry Creek Arts Festival",
+      "dateFrom": "2025-07-04",
+      "dateTo": "2025-07-06",
+      "description": "Annual arts festival featuring visual arts, live music, performing arts, and culinary experiences."
+    },
+    {
+      "eventName": "Great American Beer Festival",
+      "dateFrom": "2025-10-02",
+      "dateTo": "2025-10-04",
+      "description": "Premier beer festival featuring hundreds of breweries, beer tastings, and brewing competitions."
+    },
+    {
+      "eventName": "Denver Film Festival",
+      "dateFrom": "2025-10-30",
+      "dateTo": "2025-11-10",
+      "description": "Annual film festival showcasing independent and international films with premieres, panels, and industry events."
+    }
+  ],
+  "Washington": [
+    {
+      "eventName": "Kennedy Center International Festival",
+      "dateFrom": "2025-03-06",
+      "dateTo": "2025-03-20",
+      "description": "Annual celebration of international arts and culture featuring theater, dance, music, and cultural events."
+    },
+    {
+      "eventName": "National Cherry Blossom Festival",
+      "dateFrom": "2025-03-20",
+      "dateTo": "2025-04-13",
+      "description": "Annual celebration of spring and Japanese-American friendship featuring cherry blossoms, parades, and cultural events."
+    },
+    {
+      "eventName": "DC Jazz Festival",
+      "dateFrom": "2025-06-06",
+      "dateTo": "2025-06-15",
+      "description": "Annual jazz festival featuring performances at venues across Washington DC with local and international artists."
+    },
+    {
+      "eventName": "Smithsonian Folklife Festival",
+      "dateFrom": "2025-06-25",
+      "dateTo": "2025-06-29",
+      "description": "Annual cultural festival on the National Mall celebrating living cultural traditions from around the world."
+    }
+  ],
+  "Boston": [
+    {
+      "eventName": "Boston Wine Festival",
+      "dateFrom": "2025-01-15",
+      "dateTo": "2025-01-29",
+      "description": "Annual wine festival featuring tastings, dinners, seminars, and wine-pairing events at Boston Harbor Hotel."
+    },
+    {
+      "eventName": "Boston Marathon",
+      "dateFrom": "2025-04-21",
+      "dateTo": "2025-04-21",
+      "description": "World's oldest annual marathon featuring 26.2-mile race through Boston with international runners and spectators."
+    },
+    {
+      "eventName": "Boston Harborfest",
+      "dateFrom": "2025-06-30",
+      "dateTo": "2025-07-04",
+      "description": "Fourth of July celebration featuring historical reenactments, concerts, fireworks, and family activities."
+    },
+    {
+      "eventName": "Boston Film Festival",
+      "dateFrom": "2025-09-10",
+      "dateTo": "2025-09-21",
+      "description": "Independent film festival showcasing innovative cinema, documentaries, and short films with industry panels."
+    }
+  ],
+  "El Paso": [
+    {
+      "eventName": "El Paso Film Festival",
+      "dateFrom": "2025-04-10",
+      "dateTo": "2025-04-13",
+      "description": "Independent film festival showcasing regional and international films with screenings and filmmaker discussions."
+    },
+    {
+      "eventName": "KLAQ International Margarita Festival",
+      "dateFrom": "2025-05-03",
+      "dateTo": "2025-05-04",
+      "description": "Annual festival celebrating margaritas with tastings, live music, food vendors, and entertainment."
+    },
+    {
+      "eventName": "Sun City Music Festival",
+      "dateFrom": "2025-09-05",
+      "dateTo": "2025-09-07",
+      "description": "Annual electronic dance music festival featuring multiple stages with EDM artists and electronic music performances."
+    },
+    {
+      "eventName": "Dia de los Muertos Festival",
+      "dateFrom": "2025-11-01",
+      "dateTo": "2025-11-02",
+      "description": "Traditional Mexican celebration honoring deceased loved ones with altars, music, dance, and cultural activities."
+    }
+  ],
+  "Nashville": [
+    {
+      "eventName": "CMA Music Festival",
+      "dateFrom": "2025-06-05",
+      "dateTo": "2025-06-08",
+      "description": "Country music festival featuring performances by top country artists across multiple venues in downtown Nashville."
+    },
+    {
+      "eventName": "Bonnaroo Music Festival",
+      "dateFrom": "2025-06-12",
+      "dateTo": "2025-06-15",
+      "description": "Multi-genre music and arts festival featuring camping, multiple stages, and diverse musical performances."
+    },
+    {
+      "eventName": "Music City Food + Wine Festival",
+      "dateFrom": "2025-09-19",
+      "dateTo": "2025-09-22",
+      "description": "Culinary festival featuring celebrity chefs, wine tastings, cooking demonstrations, and Nashville's food scene."
+    },
+    {
+      "eventName": "Nashville Film Festival",
+      "dateFrom": "2025-09-25",
+      "dateTo": "2025-10-03",
+      "description": "International film festival showcasing independent films, documentaries, and shorts with industry events."
+    }
+  ],
+  "Detroit": [
+    {
+      "eventName": "North American International Auto Show",
+      "dateFrom": "2025-01-13",
+      "dateTo": "2025-01-26",
+      "description": "Premier auto show featuring new vehicle reveals, concept cars, and automotive technology displays."
+    },
+    {
+      "eventName": "Movement Electronic Music Festival",
+      "dateFrom": "2025-05-24",
+      "dateTo": "2025-05-26",
+      "description": "Annual electronic music festival in Hart Plaza featuring techno, house, and electronic music artists."
+    },
+    {
+      "eventName": "Detroit Jazz Festival",
+      "dateFrom": "2025-09-05",
+      "dateTo": "2025-09-08",
+      "description": "Free outdoor jazz festival featuring national and international jazz artists across multiple downtown stages."
+    },
+    {
+      "eventName": "Detroit International Film Festival",
+      "dateFrom": "2025-10-16",
+      "dateTo": "2025-10-20",
+      "description": "Film festival showcasing independent and international cinema with screenings and industry panels."
+    }
+  ],
+  "Oklahoma City": [
+    {
+      "eventName": "Festival of the Arts",
+      "dateFrom": "2025-04-22",
+      "dateTo": "2025-04-27",
+      "description": "Annual arts festival in downtown Oklahoma City featuring visual arts, live music, performing arts, and food."
+    },
+    {
+      "eventName": "deadCenter Film Festival",
+      "dateFrom": "2025-06-05",
+      "dateTo": "2025-06-08",
+      "description": "Independent film festival showcasing regional and international films with screenings and filmmaker discussions."
+    },
+    {
+      "eventName": "Oklahoma State Fair",
+      "dateFrom": "2025-09-11",
+      "dateTo": "2025-09-22",
+      "description": "Annual state fair featuring agricultural exhibits, carnival rides, live entertainment, and competitions."
+    },
+    {
+      "eventName": "Plaza District Festival",
+      "dateFrom": "2025-09-13",
+      "dateTo": "2025-09-14",
+      "description": "Annual arts festival celebrating local arts, music, and culture in Oklahoma City's Plaza District."
+    }
+  ],
+  "Portland": [
+    {
+      "eventName": "Portland International Film Festival",
+      "dateFrom": "2025-02-13",
+      "dateTo": "2025-02-27",
+      "description": "Film festival showcasing international cinema, documentaries, and short films with industry events and panels."
+    },
+    {
+      "eventName": "Portland Rose Festival",
+      "dateFrom": "2025-05-23",
+      "dateTo": "2025-06-08",
+      "description": "Annual celebration featuring the Grand Floral Parade, rose shows, carnival, and community events."
+    },
+    {
+      "eventName": "Waterfront Blues Festival",
+      "dateFrom": "2025-07-04",
+      "dateTo": "2025-07-06",
+      "description": "Annual blues festival along the Willamette River featuring national blues artists and local musicians."
+    },
+    {
+      "eventName": "MusicfestNW",
+      "dateFrom": "2025-09-04",
+      "dateTo": "2025-09-07",
+      "description": "Multi-venue music festival featuring indie rock, alternative, and emerging artists across Portland venues."
+    }
+  ],
+  "Las Vegas": [
+    {
+      "eventName": "Vegas Uncork'd",
+      "dateFrom": "2025-05-08",
+      "dateTo": "2025-05-11",
+      "description": "Culinary festival featuring celebrity chefs, wine tastings, cooking demonstrations, and gourmet dining experiences."
+    },
+    {
+      "eventName": "Electric Daisy Carnival (EDC)",
+      "dateFrom": "2025-05-16",
+      "dateTo": "2025-05-18",
+      "description": "Massive electronic dance music festival featuring multiple stages, art installations, and carnival rides."
+    },
+    {
+      "eventName": "Life is Beautiful Festival",
+      "dateFrom": "2025-09-19",
+      "dateTo": "2025-09-21",
+      "description": "Multi-genre music, art, and culinary festival in downtown Las Vegas featuring diverse performances and experiences."
+    },
+    {
+      "eventName": "Las Vegas Film Festival",
+      "dateFrom": "2025-10-08",
+      "dateTo": "2025-10-12",
+      "description": "Independent film festival showcasing innovative cinema, documentaries, and short films with industry events."
+    }
+  ],
+  "Louisville": [
+    {
+      "eventName": "Louisville Film Society Festival",
+      "dateFrom": "2025-03-06",
+      "dateTo": "2025-03-16",
+      "description": "Film festival showcasing independent and international cinema with screenings and filmmaker discussions."
+    },
+    {
+      "eventName": "Kentucky Derby Festival",
+      "dateFrom": "2025-04-12",
+      "dateTo": "2025-05-03",
+      "description": "Three-week celebration culminating in the Kentucky Derby featuring parades, concerts, and community events."
+    },
+    {
+      "eventName": "Forecastle Festival",
+      "dateFrom": "2025-07-25",
+      "dateTo": "2025-07-27",
+      "description": "Annual music festival along the Ohio River featuring rock, indie, hip-hop, and electronic music artists."
+    },
+    {
+      "eventName": "St. James Court Art Show",
+      "dateFrom": "2025-10-04",
+      "dateTo": "2025-10-05",
+      "description": "Annual outdoor arts festival featuring visual arts, live music, food vendors, and family activities."
+    }
+  ],
+  "Baltimore": [
+    {
+      "eventName": "Baltimore Film Festival",
+      "dateFrom": "2025-04-25",
+      "dateTo": "2025-05-04",
+      "description": "Independent film festival showcasing regional and international films with screenings and industry panels."
+    },
+    {
+      "eventName": "Maryland Film Festival",
+      "dateFrom": "2025-05-01",
+      "dateTo": "2025-05-05",
+      "description": "Annual film festival showcasing independent cinema, documentaries, and short films with special events."
+    },
+    {
+      "eventName": "Artscape",
+      "dateFrom": "2025-07-18",
+      "dateTo": "2025-07-20",
+      "description": "America's largest free arts festival featuring visual arts, live music, theater, and literary arts."
+    },
+    {
+      "eventName": "Baltimore Book Festival",
+      "dateFrom": "2025-09-26",
+      "dateTo": "2025-09-28",
+      "description": "Annual literary festival featuring author readings, book signings, panel discussions, and literary activities."
+    }
+  ],
+  "Milwaukee": [
+    {
+      "eventName": "Summerfest",
+      "dateFrom": "2025-06-26",
+      "dateTo": "2025-07-06",
+      "description": "World's largest music festival featuring multiple stages with diverse musical genres and local food vendors."
+    },
+    {
+      "eventName": "Brady Street Festival",
+      "dateFrom": "2025-07-26",
+      "dateTo": "2025-07-27",
+      "description": "Annual street festival featuring live music, food vendors, arts and crafts, and family activities."
+    },
+    {
+      "eventName": "Wisconsin State Fair",
+      "dateFrom": "2025-08-01",
+      "dateTo": "2025-08-11",
+      "description": "Annual state fair featuring agricultural exhibits, carnival rides, live entertainment, and local food."
+    },
+    {
+      "eventName": "Milwaukee Film Festival",
+      "dateFrom": "2025-10-16",
+      "dateTo": "2025-10-30",
+      "description": "Film festival showcasing independent and international cinema with screenings, panels, and special events."
+    }
+  ],
+  "Albuquerque": [
+    {
+      "eventName": "Albuquerque Film Festival",
+      "dateFrom": "2025-03-13",
+      "dateTo": "2025-03-16",
+      "description": "Independent film festival showcasing regional and international films with screenings and filmmaker discussions."
+    },
+    {
+      "eventName": "Gathering of Nations Powwow",
+      "dateFrom": "2025-04-24",
+      "dateTo": "2025-04-26",
+      "description": "World's largest powwow celebrating Native American culture with dancing, singing, crafts, and traditional food."
+    },
+    {
+      "eventName": "New Mexico State Fair",
+      "dateFrom": "2025-09-05",
+      "dateTo": "2025-09-18",
+      "description": "Annual state fair featuring agricultural exhibits, carnival rides, rodeo, concerts, and local cuisine."
+    },
+    {
+      "eventName": "Albuquerque International Balloon Fiesta",
+      "dateFrom": "2025-10-04",
+      "dateTo": "2025-10-12",
+      "description": "World's largest hot air balloon festival featuring mass ascensions, special shape balloons, and evening glows."
+    }
+  ],
+  "Tucson": [
+    {
+      "eventName": "Tucson Gem and Mineral Show",
+      "dateFrom": "2025-01-30",
+      "dateTo": "2025-02-13",
+      "description": "World's largest gem and mineral show featuring exhibits, vendors, educational programs, and special displays."
+    },
+    {
+      "eventName": "Tucson International Film Festival",
+      "dateFrom": "2025-04-03",
+      "dateTo": "2025-04-06",
+      "description": "Film festival showcasing independent and international cinema with screenings and filmmaker discussions."
+    },
+    {
+      "eventName": "Tucson Folk Festival",
+      "dateFrom": "2025-04-12",
+      "dateTo": "2025-04-13",
+      "description": "Annual folk music festival featuring traditional and contemporary folk artists with workshops and performances."
+    },
+    {
+      "eventName": "All Souls Procession",
+      "dateFrom": "2025-11-02",
+      "dateTo": "2025-11-02",
+      "description": "Community celebration honoring deceased loved ones with procession, music, art, and cultural activities."
+    }
+  ],
+  "Fresno": [
+    {
+      "eventName": "Rogue Festival",
+      "dateFrom": "2025-03-13",
+      "dateTo": "2025-03-23",
+      "description": "Annual fringe arts festival featuring theater, comedy, music, dance, and experimental performances."
+    },
+    {
+      "eventName": "Fresno Film Festival",
+      "dateFrom": "2025-06-05",
+      "dateTo": "2025-06-08",
+      "description": "Independent film festival showcasing regional and international films with screenings and industry events."
+    },
+    {
+      "eventName": "Big Fresno Fair",
+      "dateFrom": "2025-10-01",
+      "dateTo": "2025-10-12",
+      "description": "Annual county fair featuring agricultural exhibits, carnival rides, concerts, competitions, and local food."
+    },
+    {
+      "eventName": "Dia de los Muertos Festival",
+      "dateFrom": "2025-11-01",
+      "dateTo": "2025-11-02",
+      "description": "Traditional Mexican celebration honoring deceased loved ones with altars, music, dance, and cultural activities."
+    }
+  ],
+  "Sacramento": [
+    {
+      "eventName": "Sacramento Film Festival",
+      "dateFrom": "2025-04-10",
+      "dateTo": "2025-04-13",
+      "description": "Independent film festival showcasing regional and international films with screenings and filmmaker discussions."
+    },
+    {
+      "eventName": "Sacramento Music Festival",
+      "dateFrom": "2025-05-23",
+      "dateTo": "2025-05-26",
+      "description": "Annual music festival featuring jazz, blues, ragtime, zydeco, and swing music with multiple stages and dancing."
+    },
+    {
+      "eventName": "California State Fair",
+      "dateFrom": "2025-07-11",
+      "dateTo": "2025-07-24",
+      "description": "Annual state fair featuring agricultural exhibits, carnival rides, concerts, competitions, and California cuisine."
+    },
+    {
+      "eventName": "Farm-to-Fork Festival",
+      "dateFrom": "2025-09-27",
+      "dateTo": "2025-09-28",
+      "description": "Annual culinary festival celebrating Sacramento's farm-to-fork movement with local chefs, farmers, and food vendors."
+    }
+  ],
+  "Kansas City": [
+    {
+      "eventName": "Kansas City Film Festival",
+      "dateFrom": "2025-04-17",
+      "dateTo": "2025-04-20",
+      "description": "Independent film festival showcasing regional and international films with screenings and industry panels."
+    },
+    {
+      "eventName": "Kansas City Jazz & Heritage Festival",
+      "dateFrom": "2025-07-11",
+      "dateTo": "2025-07-13",
+      "description": "Annual jazz festival celebrating Kansas City's jazz heritage with performances by national and local artists."
+    },
+    {
+      "eventName": "American Royal BBQ Contest",
+      "dateFrom": "2025-09-26",
+      "dateTo": "2025-09-28",
+      "description": "World's largest barbecue competition featuring BBQ teams, live music, and family-friendly activities."
+    },
+    {
+      "eventName": "Plaza Art Fair",
+      "dateFrom": "2025-09-27",
+      "dateTo": "2025-09-28",
+      "description": "Annual outdoor arts festival featuring visual arts, live music, food vendors, and family activities."
+    }
+  ],
+  "Mesa": [
+    {
+      "eventName": "Mesa Music Festival",
+      "dateFrom": "2025-03-08",
+      "dateTo": "2025-03-09",
+      "description": "Annual music festival featuring diverse musical genres with local and regional artists."
+    },
+    {
+      "eventName": "Mesa Grande Cultural Festival",
+      "dateFrom": "2025-04-05",
+      "dateTo": "2025-04-06",
+      "description": "Multicultural festival celebrating Mesa's diverse communities with food, music, dance, and cultural activities."
+    },
+    {
+      "eventName": "East Valley Film Festival",
+      "dateFrom": "2025-11-07",
+      "dateTo": "2025-11-09",
+      "description": "Independent film festival showcasing regional films with screenings and filmmaker discussions."
+    },
+    {
+      "eventName": "Mesa Arts Festival",
+      "dateFrom": "2025-12-06",
+      "dateTo": "2025-12-07",
+      "description": "Annual arts festival featuring visual arts, live music, performing arts, and family-friendly activities."
+    }
+  ],
+  "Atlanta": [
+    {
+      "eventName": "Atlanta Film Festival",
+      "dateFrom": "2025-04-17",
+      "dateTo": "2025-04-27",
+      "description": "Academy Award-qualifying film festival showcasing independent films, documentaries, and shorts with industry events."
+    },
+    {
+      "eventName": "Atlanta Jazz Festival",
+      "dateFrom": "2025-05-24",
+      "dateTo": "2025-05-26",
+      "description": "Annual jazz festival in Piedmont Park featuring national and international jazz artists with free admission."
+    },
+    {
+      "eventName": "DragonCon",
+      "dateFrom": "2025-08-28",
+      "dateTo": "2025-09-01",
+      "description": "Annual sci-fi and fantasy convention featuring panels, costumes, gaming, and celebrity appearances."
+    },
+    {
+      "eventName": "Music Midtown",
+      "dateFrom": "2025-09-13",
+      "dateTo": "2025-09-14",
+      "description": "Annual music festival in Piedmont Park featuring rock, pop, hip-hop, and alternative music artists."
+    }
+  ],
+  "Colorado Springs": [
+    {
+      "eventName": "Pikes Peak International Hill Climb",
+      "dateFrom": "2025-06-29",
+      "dateTo": "2025-06-29",
+      "description": "Annual automobile and motorcycle hill climb race up Pikes Peak with various vehicle classes."
+    },
+    {
+      "eventName": "Colorado Springs Fine Arts Center Festival",
+      "dateFrom": "2025-07-19",
+      "dateTo": "2025-07-20",
+      "description": "Annual arts festival featuring visual arts, live music, theater, and cultural activities."
+    },
+    {
+      "eventName": "Colorado Springs Labor Day Lift Off",
+      "dateFrom": "2025-08-30",
+      "dateTo": "2025-09-01",
+      "description": "Annual hot air balloon festival featuring balloon launches, tethered rides, and family activities."
+    },
+    {
+      "eventName": "Commonwheel Artists Labor Day Festival",
+      "dateFrom": "2025-08-30",
+      "dateTo": "2025-09-01",
+      "description": "Annual arts and crafts festival featuring local artists, live music, and family-friendly activities."
+    }
+  ],
+  "Raleigh": [
+    {
+      "eventName": "Raleigh Film Festival",
+      "dateFrom": "2025-01-17",
+      "dateTo": "2025-01-26",
+      "description": "Independent film festival showcasing regional and international films with screenings and industry panels."
+    },
+    {
+      "eventName": "Hopscotch Music Festival",
+      "dateFrom": "2025-09-05",
+      "dateTo": "2025-09-07",
+      "description": "Annual indie music festival featuring multiple venues across downtown Raleigh with emerging and established artists."
+    },
+    {
+      "eventName": "North Carolina State Fair",
+      "dateFrom": "2025-10-16",
+      "dateTo": "2025-10-26",
+      "description": "Annual state fair featuring agricultural exhibits, carnival rides, live entertainment, and Southern cuisine."
+    },
+    {
+      "eventName": "First Night Raleigh",
+      "dateFrom": "2025-12-31",
+      "dateTo": "2025-12-31",
+      "description": "New Year's Eve celebration featuring live music, performances, activities, and midnight fireworks."
+    }
+  ],
+  "Omaha": [
+    {
+      "eventName": "Film Streams Festival",
+      "dateFrom": "2025-03-20",
+      "dateTo": "2025-03-23",
+      "description": "Independent film festival showcasing art house cinema, documentaries, and international films."
+    },
+    {
+      "eventName": "Omaha Summer Arts Festival",
+      "dateFrom": "2025-06-07",
+      "dateTo": "2025-06-08",
+      "description": "Annual arts festival in downtown Omaha featuring visual arts, live music, performing arts, and food vendors."
+    },
+    {
+      "eventName": "College World Series",
+      "dateFrom": "2025-06-14",
+      "dateTo": "2025-06-24",
+      "description": "Annual NCAA Division I baseball tournament featuring the top eight college baseball teams competing for the championship."
+    },
+    {
+      "eventName": "Maha Music Festival",
+      "dateFrom": "2025-08-16",
+      "dateTo": "2025-08-17",
+      "description": "Annual music festival featuring indie rock, alternative, and emerging artists in Aksarben Village."
+    }
+  ],
+  "Miami": [
+    {
+      "eventName": "South Beach Wine & Food Festival",
+      "dateFrom": "2025-02-20",
+      "dateTo": "2025-02-23",
+      "description": "Culinary festival featuring celebrity chefs, wine tastings, cooking demonstrations, and gourmet experiences."
+    },
+    {
+      "eventName": "Miami International Film Festival",
+      "dateFrom": "2025-03-07",
+      "dateTo": "2025-03-16",
+      "description": "International film festival showcasing Ibero-American cinema, documentaries, and world cinema premieres."
+    },
+    {
+      "eventName": "Ultra Music Festival",
+      "dateFrom": "2025-03-28",
+      "dateTo": "2025-03-30",
+      "description": "Annual electronic dance music festival featuring world-renowned DJs and electronic music artists."
+    },
+    {
+      "eventName": "Art Basel Miami Beach",
+      "dateFrom": "2025-12-04",
+      "dateTo": "2025-12-07",
+      "description": "Premier international art fair featuring modern and contemporary art from galleries worldwide."
+    }
+  ],
+  "Long Beach": [
+    {
+      "eventName": "Long Beach Grand Prix",
+      "dateFrom": "2025-04-11",
+      "dateTo": "2025-04-13",
+      "description": "Annual IndyCar race through downtown Long Beach streets featuring racing, concerts, and entertainment."
+    },
+    {
+      "eventName": "Long Beach Jazz Festival",
+      "dateFrom": "2025-08-09",
+      "dateTo": "2025-08-10",
+      "description": "Annual jazz festival in Rainbow Lagoon featuring national and local jazz artists with outdoor concerts."
+    },
+    {
+      "eventName": "Long Beach International Film Festival",
+      "dateFrom": "2025-08-28",
+      "dateTo": "2025-09-01",
+      "description": "Independent film festival showcasing regional and international films with screenings and industry events."
+    },
+    {
+      "eventName": "Belmont Shore Christmas Parade",
+      "dateFrom": "2025-12-14",
+      "dateTo": "2025-12-14",
+      "description": "Annual Christmas parade featuring floats, marching bands, community groups, and holiday entertainment."
+    }
+  ],
+  "Virginia Beach": [
+    {
+      "eventName": "Something in the Water Festival",
+      "dateFrom": "2025-04-25",
+      "dateTo": "2025-04-27",
+      "description": "Music and culture festival on Virginia Beach featuring hip-hop, R&B, and pop artists with beach activities."
+    },
+    {
+      "eventName": "Patriotic Festival",
+      "dateFrom": "2025-05-24",
+      "dateTo": "2025-05-26",
+      "description": "Memorial Day weekend celebration featuring live music, military tributes, fireworks, and family activities."
+    },
+    {
+      "eventName": "Viva Elvis Festival",
+      "dateFrom": "2025-07-04",
+      "dateTo": "2025-07-06",
+      "description": "Annual Elvis tribute festival featuring tribute artists, live music, contests, and Elvis-themed activities."
+    },
+    {
+      "eventName": "Neptune Festival",
+      "dateFrom": "2025-09-26",
+      "dateTo": "2025-09-28",
+      "description": "Annual festival celebrating ocean and boardwalk culture with art show, live music, and family activities."
+    }
+  ],
+  "Oakland": [
+    {
+      "eventName": "Oakland Film Festival",
+      "dateFrom": "2025-04-03",
+      "dateTo": "2025-04-06",
+      "description": "Independent film festival showcasing diverse voices and stories with screenings and filmmaker discussions."
+    },
+    {
+      "eventName": "Art + Soul Oakland",
+      "dateFrom": "2025-08-02",
+      "dateTo": "2025-08-03",
+      "description": "Annual festival celebrating Oakland's cultural diversity with art, music, food, and community activities."
+    },
+    {
+      "eventName": "Oakland Music Festival",
+      "dateFrom": "2025-08-30",
+      "dateTo": "2025-08-31",
+      "description": "Annual music festival featuring diverse genres with local and regional artists across multiple venues."
+    },
+    {
+      "eventName": "Oakland International Wine Festival",
+      "dateFrom": "2025-09-13",
+      "dateTo": "2025-09-14",
+      "description": "Annual wine festival featuring tastings, food pairings, live music, and vineyard representatives."
+    }
+  ],
+  "Minneapolis": [
+    {
+      "eventName": "Minneapolis St. Paul International Film Festival",
+      "dateFrom": "2025-04-10",
+      "dateTo": "2025-04-24",
+      "description": "Major film festival showcasing international cinema, documentaries, and independent films with industry events."
+    },
+    {
+      "eventName": "Minneapolis Jazz Festival",
+      "dateFrom": "2025-06-21",
+      "dateTo": "2025-06-22",
+      "description": "Annual jazz festival featuring national and local jazz artists with outdoor concerts and jazz education."
+    },
+    {
+      "eventName": "Minneapolis Aquatennial",
+      "dateFrom": "2025-07-16",
+      "dateTo": "2025-07-20",
+      "description": "Annual summer festival celebrating Minneapolis lakes with parades, fireworks, torchlight parade, and community events."
+    },
+    {
+      "eventName": "Twin Cities Film Fest",
+      "dateFrom": "2025-10-16",
+      "dateTo": "2025-10-26",
+      "description": "Film festival showcasing independent and international cinema with screenings, panels, and special events."
+    }
+  ],
+  "Tulsa": [
+    {
+      "eventName": "Mayfest",
+      "dateFrom": "2025-05-15",
+      "dateTo": "2025-05-18",
+      "description": "Annual arts festival in downtown Tulsa featuring visual arts, live music, food vendors, and family activities."
+    },
+    {
+      "eventName": "Tulsa State Fair",
+      "dateFrom": "2025-09-25",
+      "dateTo": "2025-10-05",
+      "description": "Annual fair featuring agricultural exhibits, carnival rides, live entertainment, competitions, and local food."
+    },
+    {
+      "eventName": "Tulsa International Film Festival",
+      "dateFrom": "2025-10-09",
+      "dateTo": "2025-10-12",
+      "description": "Independent film festival showcasing regional and international films with screenings and filmmaker discussions."
+    },
+    {
+      "eventName": "Oktoberfest Tulsa",
+      "dateFrom": "2025-10-11",
+      "dateTo": "2025-10-12",
+      "description": "German cultural festival featuring traditional music, dance, food, beer, and cultural activities."
+    }
+  ],
+  "Arlington": [
+    {
+      "eventName": "Arlington Music Festival",
+      "dateFrom": "2025-04-26",
+      "dateTo": "2025-04-27",
+      "description": "Annual music festival featuring diverse genres with local and regional artists in downtown Arlington."
+    },
+    {
+      "eventName": "Levitt Pavilion Concert Series",
+      "dateFrom": "2025-05-01",
+      "dateTo": "2025-05-14",
+      "description": "Free outdoor concert series featuring diverse musical genres and artists throughout the summer and fall."
+    },
+    {
+      "eventName": "Arlington Film Festival",
+      "dateFrom": "2025-09-19",
+      "dateTo": "2025-09-21",
+      "description": "Independent film festival showcasing regional films with screenings and filmmaker discussions."
+    },
+    {
+      "eventName": "Parks Mall Arts Festival",
+      "dateFrom": "2025-11-08",
+      "dateTo": "2025-11-09",
+      "description": "Annual arts festival featuring visual arts, live music, food vendors, and family activities."
+    }
+  ],
+  "New Orleans": [
+    {
+      "eventName": "Mardi Gras",
+      "dateFrom": "2025-02-15",
+      "dateTo": "2025-03-04",
+      "description": "World-famous carnival celebration featuring parades, masked balls, music, and traditional New Orleans festivities."
+    },
+    {
+      "eventName": "French Quarter Festival",
+      "dateFrom": "2025-04-10",
+      "dateTo": "2025-04-13",
+      "description": "Free music festival celebrating local New Orleans music with multiple stages throughout the French Quarter."
+    },
+    {
+      "eventName": "New Orleans Jazz & Heritage Festival",
+      "dateFrom": "2025-04-24",
+      "dateTo": "2025-05-04",
+      "description": "Legendary music festival celebrating New Orleans culture with jazz, blues, gospel, and local cuisine."
+    },
+    {
+      "eventName": "New Orleans Film Festival",
+      "dateFrom": "2025-10-15",
+      "dateTo": "2025-10-21",
+      "description": "International film festival showcasing independent films, documentaries, and Southern cinema with industry events."
+    }
+  ],
+  "Wichita": [
+    {
+      "eventName": "Wichita Riverfest",
+      "dateFrom": "2025-05-30",
+      "dateTo": "2025-06-08",
+      "description": "Annual festival along the Arkansas River featuring live music, food vendors, carnival rides, and family activities."
+    },
+    {
+      "eventName": "Wichita Wind Ensemble Summer Concert Series",
+      "dateFrom": "2025-06-15",
+      "dateTo": "2025-06-29",
+      "description": "Free outdoor concert series featuring classical and contemporary music performances in Wichita parks."
+    },
+    {
+      "eventName": "Kansas State Fair",
+      "dateFrom": "2025-09-05",
+      "dateTo": "2025-09-14",
+      "description": "Annual state fair featuring agricultural exhibits, carnival rides, concerts, competitions, and Kansas cuisine."
+    },
+    {
+      "eventName": "Tallgrass Film Festival",
+      "dateFrom": "2025-10-15",
+      "dateTo": "2025-10-19",
+      "description": "Independent film festival showcasing narrative features, documentaries, and short films with industry panels."
+    }
+  ],
+  "Cleveland": [
+    {
+      "eventName": "Cleveland International Film Festival",
+      "dateFrom": "2025-03-26",
+      "dateTo": "2025-04-06",
+      "description": "Major film festival showcasing international cinema, documentaries, and independent films with industry events."
+    },
+    {
+      "eventName": "Cleveland Music Festival",
+      "dateFrom": "2025-07-04",
+      "dateTo": "2025-07-06",
+      "description": "Annual music festival featuring rock, pop, and alternative music artists with multiple stages."
+    },
+    {
+      "eventName": "Taste of Cleveland",
+      "dateFrom": "2025-08-08",
+      "dateTo": "2025-08-10",
+      "description": "Annual food festival showcasing Cleveland's culinary scene with restaurant booths, live music, and family activities."
+    },
+    {
+      "eventName": "Ingenuity Festival",
+      "dateFrom": "2025-09-26",
+      "dateTo": "2025-09-28",
+      "description": "Annual festival celebrating innovation in arts, technology, and creative expression with performances and exhibits."
+    }
+  ],
+  "Tampa": [
+    {
+      "eventName": "Gasparilla Pirate Festival",
+      "dateFrom": "2025-01-25",
+      "dateTo": "2025-02-08",
+      "description": "Annual pirate-themed celebration featuring parades, live music, food vendors, and family-friendly pirate activities."
+    },
+    {
+      "eventName": "Fiesta Day Festival",
+      "dateFrom": "2025-02-15",
+      "dateTo": "2025-02-16",
+      "description": "Annual celebration of Hispanic culture featuring music, dance, food, arts, and cultural activities."
+    },
+    {
+      "eventName": "Tampa Bay Margarita Festival",
+      "dateFrom": "2025-06-07",
+      "dateTo": "2025-06-08",
+      "description": "Annual festival celebrating margaritas with tastings, live music, food vendors, and tropical entertainment."
+    },
+    {
+      "eventName": "Tampa International Gay & Lesbian Film Festival",
+      "dateFrom": "2025-10-10",
+      "dateTo": "2025-10-19",
+      "description": "Film festival showcasing LGBTQ+ cinema, documentaries, and short films with community events."
+    }
+  ]
+}
