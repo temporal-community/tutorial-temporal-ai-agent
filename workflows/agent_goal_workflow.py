@@ -222,7 +222,7 @@ class AgentGoalWorkflow:
         )
         self.confirmed = False
         confirmed_tool_data = self.tool_data.copy()
-        confirmed_tool_data["next"] = "user_confirmed_tool_run"
+        confirmed_tool_data["next"] = "confirm"
         self.add_message("user_confirmed_tool_run", confirmed_tool_data)
 
         # execute the tool by key as defined in tools/__init__.py
