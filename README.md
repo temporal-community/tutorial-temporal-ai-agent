@@ -1,13 +1,13 @@
 # Tutorial - Temporal AI Agent
 
-_This repository is the companion repository for the tutorial [How To Build a Durable Agentic AI with Temporal and Python](#)._
+_This repository is the companion repository for the tutorial [How To Build a Durable Agentic AI with Temporal and Python](https://learn.temporal.io/tutorials/ai/durable-ai-agent/)._
 
 The code in this repository supports learning how to build a durable agentic AI with Temporal.
 It is inspired by Steve Androulakis' [agengit AI implementation](https://github.com/temporal-community/temporal-ai-agent/) using Temporal.
 This tutorial currently is the first step in building out an application similar to Steve's.
 
 **Want to learn how to build this application from scratch?
-[Check out the tutorial](#)**
+[Check out the tutorial](https://learn.temporal.io/tutorials/ai/durable-ai-agent/)**
 
 ## Why Temporal?
 There are a lot of AI and Agentic AI tools out there, and more on the way. 
